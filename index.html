@@ -82,6 +82,19 @@ header.nav.scrolled{border-bottom-color:var(--rule)}
 .nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px}
 .brand{display:flex;align-items:center;gap:10px;font-family:var(--display);font-weight:800;font-size:21px;letter-spacing:-.03em;text-decoration:none;white-space:nowrap;color:var(--ink)}
 .nav-cta{display:flex;gap:18px;align-items:center}
+.price{max-width:560px;margin:8px auto 0;background:var(--sheet);border:1px solid var(--rule);border-radius:16px;padding:32px 30px;text-align:center}
+.price .amt{font-family:var(--display);font-weight:800;font-size:clamp(48px,7vw,64px);letter-spacing:-.03em;line-height:1;color:var(--ink)}
+.price .amt small{font-size:18px;font-weight:500;color:var(--ink-2);letter-spacing:0}
+.price .per{font-family:var(--display);font-size:15px;color:var(--ink-2);margin:10px 0 22px}
+.price ul{list-style:none;margin:0 0 26px;padding:0;text-align:left;display:grid;gap:10px;font-size:17px}
+.price li{padding-left:28px;position:relative}
+.price li::before{content:"";position:absolute;left:4px;top:.45em;width:12px;height:7px;border-left:2.5px solid var(--green);border-bottom:2.5px solid var(--green);transform:rotate(-45deg)}
+.price .fine{font-family:var(--display);font-size:13.5px;color:var(--ink-2);margin-top:14px}
+#pricing{scroll-margin-top:72px}
+#pricing .head{text-align:center;margin-left:auto;margin-right:auto}
+#pricing .head p{margin-left:auto;margin-right:auto}
+.price-note{text-align:center;font-family:var(--display);font-size:15px;color:var(--ink-2);margin-top:18px}
+@media (max-width:520px){.price{padding:26px 20px}}
 .nav-link{font-family:var(--display);font-weight:500;font-size:15px;color:var(--ink-2);text-decoration:none;white-space:nowrap}
 .nav-link:hover{color:var(--ink)}
 @media (max-width:420px){.nav-link{display:none}}
@@ -274,6 +287,7 @@ footer .nori-tag{justify-content:flex-start}
       <span class="word">nori<i>.</i></span>
     </a>
     <div class="nav-cta">
+      <a class="nav-link" href="#pricing">Pricing</a>
       <a class="nav-link" href="https://app.noricap.com/login">Sign in</a>
       <a class="btn btn-primary btn-sm" href="https://app.noricap.com/signup">Meet your AI CFO</a>
     </div>
@@ -291,6 +305,7 @@ footer .nori-tag{justify-content:flex-start}
       <div class="actions">
         <a class="btn btn-primary" href="https://app.noricap.com/signup">Meet Your AI CFO →</a>
       </div>
+      <p class="fine"><span>7-day free trial</span><span>Then $199 a month per company</span><span>Cancel anytime</span></p>
       <p class="built">Built for growing businesses and the advisors who support them.</p>
     </div>
   </section>
@@ -460,9 +475,32 @@ footer .nori-tag{justify-content:flex-start}
         <div class="step"><span class="n">STEP 3</span><h3>Start asking better questions.</h3><p>Get clear answers, practical insights, and a better understanding of your business.</p></div>
       </div>
       <div class="go">
-        <a class="btn btn-primary" href="https://app.noricap.com/signup">Start your free trial →</a>
-        <p class="fine">7 days free, then $199 a month per company. Cancel anytime.</p>
+        <a class="btn btn-primary" href="#pricing">See pricing →</a>
       </div>
+    </div>
+  </section>
+
+  <section class="block" id="pricing" style="padding-top:24px">
+    <div class="wrap">
+      <div class="head">
+        <h2>Simple pricing.</h2>
+        <p>One plan with everything included. Try it free for 7 days.</p>
+      </div>
+      <div class="price">
+        <div class="amt">$199<small> / month</small></div>
+        <p class="per">per company, after a 7-day free trial</p>
+        <ul>
+          <li>Connect QuickBooks or Xero, or upload exports from any accounting system</li>
+          <li>Issues flagged and sized in dollars: margins, customers, spending and receivables</li>
+          <li>Profit, customer, spend and receivables views, updated daily</li>
+          <li>A monthly CFO report with written commentary</li>
+          <li>Ask Nori anything about your numbers</li>
+          <li>Your team and your accountant at no extra cost</li>
+        </ul>
+        <a class="btn btn-primary" href="https://app.noricap.com/signup">Start your free trial →</a>
+        <p class="fine">Card required to start. You won't be charged until the trial ends, and you can cancel anytime in Settings.</p>
+      </div>
+      <p class="price-note">Advising several businesses? <a href="#advisors">Bring Nori to your clients</a>.</p>
     </div>
   </section>
 
