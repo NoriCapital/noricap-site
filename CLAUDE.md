@@ -28,7 +28,8 @@ Philip and Pratibha both work on this repo, each with their own Claude sessions.
 - `guides/`, `privacy.html`, `terms.html`, `thanks.html`, `404.html`.
 - Screenshots are `img-*.webp`, taken from the app's sample company (Harlow & Pine), never from a real customer.
 - Forms (funding, partners, questions, template) are Netlify Forms, found by `data-netlify="true"` and their `name`. A new form needs a new unique name; renaming one starts a new submissions list.
-- Unboring sign-ups go through `netlify/functions/subscribe.mjs` (needs `BEEHIIV_API_KEY` in Netlify). Source `template-optin` gets the template welcome email; everything else gets the main welcome.
+- Newsletter sign-ups on noricap.com are a "Subscribe for free" button to `https://unboring.beehiiv.com/subscribe` (with `utm_source=noricap.com` and `utm_medium=<where>`), so every reader goes through Unboring's own sign-up flow (survey, then recommended newsletters, which is how the newsletter earns). Don't add email fields that subscribe through the API, except the template form's opt-in.
+- `netlify/functions/subscribe.mjs` is now only for the template form's Unboring opt-in (welcome email `template-optin`). `netlify/functions/issues.mjs` serves the latest Unboring issues to the homepage (cached an hour); the HTML keeps a fallback list.
 - Bot protection on every form: anything sent within 3 seconds of the page loading, or with the hidden `bot-field` / `website` field filled, gets a normal-looking thank-you but nothing is sent. The newsletter function also drops sign-ups whose `elapsed` is missing or under 3,000 ms. Keep `elapsed` in any new call to it.
 - `_redirects` holds short URLs and old addresses; `sitemap.xml` lists every public page. Update both when you add, rename or remove a page.
 

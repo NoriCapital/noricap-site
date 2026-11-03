@@ -445,6 +445,27 @@ footer .nori-tag{justify-content:flex-start}
 .track.dark li::before{border-color:#9FD3B8}
 .btn-light{background:var(--paper);color:var(--ink)}
 @media (max-width:860px){.tracks{grid-template-columns:1fr}}
+/* Unboring newsletter section: button-first, like the big Beehiiv newsletters */
+.nl{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:36px;align-items:start;border:1px solid var(--rule);background:var(--sheet);border-radius:24px;padding:40px clamp(20px,4vw,48px)}
+.nl-main{display:grid;gap:16px;min-width:0}
+.nl-main h2{font-family:var(--serif);font-weight:500;font-size:clamp(30px,3.8vw,44px);line-height:1.05;letter-spacing:-.025em}
+.nl-main .lead{color:var(--ink-2);font-size:18px}
+.nl-actions{display:flex;flex-wrap:wrap;gap:14px 20px;align-items:center}
+.nl-sample{font-family:var(--display);font-weight:700;font-size:16px}
+.nl-main .fine{font-family:var(--display);font-size:13.5px;color:var(--ink-2)}
+.nl-side{display:grid;gap:16px;min-width:0}
+.nl-k{font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--green);margin:0 0 8px}
+.nl-preview{background:var(--paper);border-radius:16px;padding:20px 22px}
+.nl-preview ul{list-style:none;margin:0;padding:0;display:grid;gap:10px;font-size:16px;color:var(--ink-2)}
+.nl-preview b{color:var(--ink);font-family:var(--display);font-size:15.5px}
+.nl-latest ol{list-style:none;margin:0 0 10px;padding:0;display:grid}
+.nl-latest li{border-top:1px solid var(--rule)}
+.nl-latest li:last-child{border-bottom:1px solid var(--rule)}
+.nl-latest a:not(.nl-all){display:grid;gap:2px;padding:11px 0;text-decoration:none;color:var(--ink);font-family:var(--display);font-weight:700;font-size:15.5px;line-height:1.35}
+.nl-latest a:not(.nl-all):hover{color:var(--green)}
+.nl-latest .d{font-family:var(--mono);font-weight:400;font-size:12px;color:var(--ink-2)}
+.nl-all{font-family:var(--display);font-size:14.5px;font-weight:700}
+@media (max-width:860px){.nl{grid-template-columns:1fr;gap:24px;padding-block:32px}}
 </style>
 </head>
 <body>
@@ -975,20 +996,37 @@ footer .nori-tag{justify-content:flex-start}
 
   <section class="block" id="newsletter" style="padding-top:24px">
     <div class="wrap">
-      <div class="news">
-        <div>
-          <p class="eyebrow">Free newsletter</p>
-          <h2>Unboring: where small businesses can find capital.</h2>
-          <p class="lead">Twice a week: what's open now, who is lending, and one kind of funding explained in plain English.</p>
+      <div class="nl">
+        <div class="nl-main">
+          <p class="eyebrow">Free newsletter · Unboring</p>
+          <h2>Find money for your business in 5 minutes, twice a week.</h2>
+          <p class="lead">Loans, credit, grants, tax incentives, contracts and investors worth knowing about, explained without the jargon. Free, every Tuesday and Thursday.</p>
+          <div class="nl-actions">
+            <a class="btn btn-primary" id="nl-sub" href="https://unboring.beehiiv.com/subscribe?utm_source=noricap.com&amp;utm_medium=newsletter-section&amp;utm_campaign=home">Subscribe for free →</a>
+            <a class="textlink nl-sample" id="nl-sample" href="https://unboring.beehiiv.com/p/porta-potties-6-diesel-and-your-nov-2-payroll-deadline">Read a sample issue</a>
+          </div>
+          <p class="fine">Free to read. Unsubscribe anytime. You'll enter your email once, on Unboring's page.</p>
         </div>
-        <form id="news-form" novalidate>
-          <label for="n-email" class="sr">Email</label>
-          <input id="n-email" name="email" type="email" placeholder="you@company.com" autocomplete="email" required>
-          <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
-          <button class="btn btn-primary" type="submit">Subscribe</button>
-          <p class="msg" role="status" hidden></p>
-          <p class="fine">Free. Sent through Beehiiv; unsubscribe anytime. <a class="textlink" href="https://unboring.beehiiv.com/" target="_blank" rel="noopener">Read past issues</a>.</p>
-        </form>
+        <div class="nl-side">
+          <div class="nl-preview" aria-label="What's inside an issue">
+            <p class="nl-k">Inside every issue</p>
+            <ul>
+              <li><b>The Capital Radar.</b> Who's lending and investing now, with amounts, terms and who qualifies.</li>
+              <li><b>The Grant Watch.</b> Programs with award sizes, eligibility and deadlines.</li>
+              <li><b>The Credit Playbook.</b> When a business card or credit line helps, and when it costs you.</li>
+              <li><b>The Money Move.</b> One practical lesson, from cash flow to lender-ready financials.</li>
+            </ul>
+          </div>
+          <div class="nl-latest">
+            <p class="nl-k">Latest issues</p>
+            <ol id="nl-issues">
+              <li><a href="https://unboring.beehiiv.com/p/porta-potties-6-diesel-and-your-nov-2-payroll-deadline"><span class="d">Nov 2, 2026</span>Porta potties, $6 diesel, and a payroll deadline today</a></li>
+              <li><a href="https://unboring.beehiiv.com/p/qbi-deduction-permanent-2026"><span class="d">Oct 23, 2026</span>The 20% QBI Deduction Is Now Permanent: What Changes in 2026</a></li>
+              <li><a href="https://unboring.beehiiv.com/p/rd-tax-credit-payroll-offset-2026"><span class="d">Oct 23, 2026</span>The R&amp;D Tax Credit in 2026: Up to $500,000 a Year, Even Without Profits</a></li>
+            </ol>
+            <a class="textlink nl-all" href="https://unboring.beehiiv.com/">All issues →</a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -1080,6 +1118,21 @@ footer .nori-tag{justify-content:flex-start}
 
   // Bots fill and send forms within a moment of the page loading; people take longer.
   var T0=Date.now(); function tooFast(){ return Date.now()-T0<3000; }
+
+
+  // Latest Unboring issues, from Beehiiv through /.netlify/functions/issues. The list in the HTML
+  // stays if the call fails; the sample-issue link follows the newest issue.
+  (function(){
+    var ol=document.getElementById('nl-issues'); if(!ol) return;
+    fetch('/.netlify/functions/issues').then(function(r){ return r.ok ? r.json() : null; }).then(function(j){
+      if(!j || !j.issues || !j.issues.length) return;
+      function esc(t){ return String(t).replace(/[&<>"]/g,function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+      ol.innerHTML=j.issues.slice(0,3).map(function(i){ var d=i.date?new Date(i.date*1000).toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'}):''; return '<li><a href="'+esc(i.url)+'"><span class="d">'+esc(d)+'</span>'+esc(i.title)+'</a></li>'; }).join('');
+      var s=document.getElementById('nl-sample'); if(s) s.href=j.issues[0].url;
+    }).catch(function(){});
+    var sub=document.getElementById('nl-sub');
+    if(sub) sub.addEventListener('click',function(){ if(window.gtag) gtag('event','newsletter_click',{location:'home-section'}); });
+  })();
 
   // First-touch source: UTM tags or referrer, saved with form submissions
   var src='';
