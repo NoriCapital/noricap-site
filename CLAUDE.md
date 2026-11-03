@@ -44,3 +44,18 @@ Philip and Pratibha both work on this repo, each with their own Claude sessions.
 ## Writing
 
 Plain English for business owners: short sentences, no jargon, concrete numbers. Calm and trustworthy, not hype. Nori gives analysis, not tax, legal or investment advice.
+
+## Daily search pages (weekday scheduled task)
+
+One new guide each weekday, written for an owner who typed the question into Google.
+
+1. `git pull --rebase`. Take the first unchecked topic in `content/topics.md` (not public; blocked in `_redirects`). Skip any topic already covered by a page in `guides/`.
+2. Research it with web search. Every number, rule or rate needs a current, citable source (SBA, IRS, Federal Reserve, BLS, RMA/industry bodies, lender sites). No invented statistics, examples presented as real, or quotes. Worked examples must say they are examples and the arithmetic must be checked by running it.
+3. Write `guides/<short-slug>.html` by copying the structure and styles of `guides/profit-margin-small-business.html`: label, H1 that matches the question, a short lede, plain-English sections, at least one worked example in a `.calc` block, a link to the most relevant calculator (`/calculators/...`) and to the 13-week template (`/#template`), the green Nori call-to-action box, and a "Sources" list with links and the date checked. 900 to 1,500 words. Title under 60 characters, description under 155.
+4. Mention Nori only where it genuinely helps, and only features the app actually has. No hype, no competitor bashing.
+5. Add the page to `guides/index.html` (newest first) and to `sitemap.xml`. Tick the topic in `content/topics.md` with the date and URL.
+6. Check it locally at desktop and phone width (no sideways scrolling, no console errors), then commit ("Guide: <title>") and push. Netlify publishes it.
+7. End the run with a one-paragraph summary: the page title, its URL, the main sources, and anything that needs a person's attention.
+
+If research can't support the topic properly, skip it (tick it with "skipped: <reason>") and take the next one. Never publish a page you couldn't verify.
+
