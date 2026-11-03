@@ -2,3 +2,9 @@
 /sample/*  /    301
 /demo      /    301
 /demo/*    /    301
+/calculators/loan-payment    /calculators/loan-payment.html    301
+/calculators/cash-runway    /calculators/cash-runway.html    301
+/calculators/how-much-can-i-borrow    /calculators/how-much-can-i-borrow.html    301
+/for-accountants    /for-accountants.html    301
+/accountants    /for-accountants.html    301
+/calculator    /calculators/    301
