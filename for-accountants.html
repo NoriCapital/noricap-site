@@ -188,6 +188,7 @@ footer .disc{flex-basis:100%;font-size:12.5px;margin:0}
 <footer><div class="wrap"><span><b style="font-family:var(--body);color:var(--ink);font-size:18px">nori<span style="color:var(--green)">.</span></b> by Nori Cap · New York · <a href="mailto:pa@noricap.com">pa@noricap.com</a></span><nav aria-label="Footer"><a href="/">Home</a><a href="/calculators/">Calculators</a><a href="/compare/">Compare</a><a href="/for-accountants.html">For accountants</a><a href="/guides/">Guides</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a></nav>
 <p class="disc">Calculators and comparisons are for general information, not financial, tax, legal or lending advice. Lenders set their own requirements. QuickBooks is a registered trademark of Intuit Inc. Xero is a trademark of Xero Limited. Clockwork, Fathom and LivePlan are trademarks of their owners. Nori is not affiliated with or endorsed by them.</p></div></footer>
 <script>
+var T0=Date.now(); function tooFast(){ return Date.now()-T0<3000; }
 (function(){
   var FALLBACK='https://unboring.beehiiv.com/subscribe';
   document.querySelectorAll('form.newsf').forEach(function(nf){
@@ -196,8 +197,9 @@ footer .disc{flex-basis:100%;font-size:12.5px;margin:0}
       var input=nf.querySelector('input[type=email]'), msg=nf.querySelector('.msg'), btn=nf.querySelector('button');
       if(nf.website && nf.website.value) return;
       if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value.trim())){ input.focus(); input.setCustomValidity('Enter an email like you@company.com'); input.reportValidity(); input.addEventListener('input',function(){ input.setCustomValidity(''); },{once:true}); return; }
+      if(tooFast()){ msg.hidden=false; msg.textContent="You're in. Check your inbox for a welcome email from Unboring."; input.value=''; return; }
       btn.disabled=true;
-      fetch('/.netlify/functions/subscribe',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:input.value.trim(),source:nf.dataset.source||'site'})})
+      fetch('/.netlify/functions/subscribe',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:input.value.trim(),source:nf.dataset.source||'site',elapsed:Date.now()-T0})})
         .then(function(r){ return r.ok; }).catch(function(){ return false; })
         .then(function(ok){ msg.hidden=false; btn.disabled=false;
           if(ok){ msg.textContent="You're in. Check your inbox for a welcome email from Unboring."; input.value=''; if(window.gtag) gtag('event','newsletter_signup',{source:nf.dataset.source}); }
@@ -215,6 +217,7 @@ footer .disc{flex-basis:100%;font-size:12.5px;margin:0}
     for(var i=0;i<req.length;i++){ if(!req[i].value.trim()){ req[i].focus(); req[i].reportValidity(); return; } }
     if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value.trim())){ input.focus(); input.setCustomValidity('Enter a work email like you@firm.com'); input.reportValidity(); input.addEventListener('input',function(){ input.setCustomValidity(''); },{once:true}); return; }
     var btn=f.querySelector('button[type=submit]'); btn.disabled=true;
+    if(tooFast() || (f.elements['bot-field'] && f.elements['bot-field'].value)){ f.querySelectorAll('.row2,.small').forEach(function(el){ el.hidden=true; }); ok.hidden=false; return; }
     fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(new FormData(f)).toString()})
       .then(function(r){ if(!r.ok) throw 0; f.querySelectorAll('.row2,.small').forEach(function(el){ el.hidden=true; }); ok.hidden=false; if(window.gtag) gtag('event','generate_lead',{form:'partners-page'}); })
       .catch(function(){ btn.disabled=false; ok.hidden=false; ok.textContent="That didn't go through. Check your connection and try again."; });

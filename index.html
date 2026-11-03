@@ -1078,6 +1078,9 @@ footer .nori-tag{justify-content:flex-start}
     draw();
   })();
 
+  // Bots fill and send forms within a moment of the page loading; people take longer.
+  var T0=Date.now(); function tooFast(){ return Date.now()-T0<3000; }
+
   // First-touch source: UTM tags or referrer, saved with form submissions
   var src='';
   try{ src=sessionStorage.getItem('nc_src')||''; }catch(e){}
@@ -1092,7 +1095,7 @@ footer .nori-tag{justify-content:flex-start}
   // Unboring newsletter (Beehiiv). Falls back to Beehiiv's own page if the function isn't set up.
   var FALLBACK='https://unboring.beehiiv.com/subscribe';
   function subscribe(email, source){
-    return fetch('/.netlify/functions/subscribe',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:email,source:source})})
+    return fetch('/.netlify/functions/subscribe',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:email,source:source,elapsed:Date.now()-T0})})
       .then(function(r){ return r.ok; }).catch(function(){ return false; });
   }
   var nf=document.getElementById('news-form');
@@ -1101,6 +1104,7 @@ footer .nori-tag{justify-content:flex-start}
     var input=nf.querySelector('input[type=email]'), msg=nf.querySelector('.msg'), btn=nf.querySelector('button');
     if(nf.website.value) return;
     if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value.trim())){ input.focus(); input.setCustomValidity('Enter an email like you@company.com'); input.reportValidity(); input.addEventListener('input',function(){ input.setCustomValidity(''); },{once:true}); return; }
+    if(tooFast()){ msg.hidden=false; msg.textContent="You're in. Check your inbox for a welcome email from Unboring."; input.value=''; return; }
     btn.disabled=true;
     subscribe(input.value.trim(),'newsletter-section').then(function(ok){
       msg.hidden=false;
@@ -1122,6 +1126,7 @@ footer .nori-tag{justify-content:flex-start}
         return;
       }
       var btn=f.querySelector('button[type=submit]'); btn.disabled=true;
+      if(tooFast() || (f.elements['bot-field'] && f.elements['bot-field'].value)){ f.querySelectorAll('.row,textarea,h3,.fine,input[type=email],button[type=submit]').forEach(function(el){ el.hidden=true; }); ok.hidden=false; var o=f.querySelector('input[name=unboring]'); if(o) o.closest('label').hidden=true; return; }
       fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(new FormData(f)).toString()})
         .then(function(r){ if(!r.ok) throw 0; f.querySelectorAll('.row,textarea,h3,.fine,input[type=email],button[type=submit]').forEach(function(el){ el.hidden=true; }); ok.hidden=false; if(window.gtag) gtag('event','generate_lead',{form:f.getAttribute('name')});
           var opt=f.querySelector('input[name=unboring]');

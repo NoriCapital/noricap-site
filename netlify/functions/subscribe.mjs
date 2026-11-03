@@ -20,6 +20,8 @@ export default async (req) => {
   let data;
   try { data = await req.json(); } catch { return json(400, { error: 'bad request' }); }
   if (data.website) return json(200, { ok: true }); // honeypot: bots fill hidden fields
+  // Bots submit within a moment of the page loading; people take longer. Pretend success so they move on.
+  if (!(Number(data.elapsed) >= 3000)) { console.log('subscribe blocked: too_fast'); return json(200, { ok: true }); }
   const email = String(data.email || '').trim().toLowerCase();
   if (!/^[^\s@]{1,64}@[^\s@]{1,190}\.[^\s@]{2,}$/.test(email)) return json(400, { error: 'email' });
   if (!process.env.BEEHIIV_API_KEY) return json(503, { error: 'not configured' });

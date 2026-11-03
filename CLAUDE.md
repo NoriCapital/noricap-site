@@ -29,6 +29,7 @@ Philip and Pratibha both work on this repo, each with their own Claude sessions.
 - Screenshots are `img-*.webp`, taken from the app's sample company (Harlow & Pine), never from a real customer.
 - Forms (funding, partners, questions, template) are Netlify Forms, found by `data-netlify="true"` and their `name`. A new form needs a new unique name; renaming one starts a new submissions list.
 - Unboring sign-ups go through `netlify/functions/subscribe.mjs` (needs `BEEHIIV_API_KEY` in Netlify). Source `template-optin` gets the template welcome email; everything else gets the main welcome.
+- Bot protection on every form: anything sent within 3 seconds of the page loading, or with the hidden `bot-field` / `website` field filled, gets a normal-looking thank-you but nothing is sent. The newsletter function also drops sign-ups whose `elapsed` is missing or under 3,000 ms. Keep `elapsed` in any new call to it.
 - `_redirects` holds short URLs and old addresses; `sitemap.xml` lists every public page. Update both when you add, rename or remove a page.
 
 ## Facts on the site must be true
