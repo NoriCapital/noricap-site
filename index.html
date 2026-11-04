@@ -37,8 +37,12 @@
 {"@type":"Question","name":"Do I need to change my existing systems?","acceptedAnswer":{"@type":"Answer","text":"No. Nori only reads your books. It never posts, edits or deletes anything, moves money, or files anything."}},
 {"@type":"Question","name":"What does my accountant still handle?","acceptedAnswer":{"@type":"Answer","text":"The books and your taxes. Nori reads those books and turns them into answers, warnings and a forecast. Invite your accountant free, so your meetings start with the answers."}},
 {"@type":"Question","name":"How long does setup take?","acceptedAnswer":{"@type":"Answer","text":"Minutes. Connected books import the last 24 months, usually in a minute or two, then refresh every day."}},
-{"@type":"Question","name":"What does Nori cost?","acceptedAnswer":{"@type":"Answer","text":"$1,500 a month per company after a 7-day free trial. That includes everything in Nori plus a 30-minute review call each month to go through your numbers and next steps. You see a first look at your own results before you add a card, and you can cancel anytime in Settings. Your team and your accountant join free. Accountants and advisors with 5 or more client companies can ask about partner pricing."}},
+{"@type":"Question","name":"What does Nori cost?","acceptedAnswer":{"@type":"Answer","text":"It depends on how you use Nori and what your business needs. Plans start at $499 a month per company, after a 7-day free trial. You see a first look at your own results before you add a card, and you can cancel anytime in Settings. Your team and your accountant join free. Accountants and advisors with 5 or more client companies can ask about partner pricing."}},
 {"@type":"Question","name":"Can Nori help me find funding?","acceptedAnswer":{"@type":"Answer","text":"Yes. The Funding page shows your debt service coverage today and with the loan you want, the largest loan your earnings support, and builds a lender package from your books. Download it as a PDF and an Excel file, or send your lender a private link that expires after 30 days. Nori doesn't lend money or make introductions for a fee."}},
+{"@type":"Question","name":"What if my books are messy?","acceptedAnswer":{"@type":"Answer","text":"Most are. Nori tells you how much spending it couldn't place, and uncategorized spending is often a finding in its own right."}},
+{"@type":"Question","name":"Am I too small for Nori?","acceptedAnswer":{"@type":"Answer","text":"If you keep books and have customers and suppliers to track, Nori has something to work with. It works best with at least a year of history; with only a few months, trends and the forecast are rougher, and Nori says so."}},
+{"@type":"Question","name":"Is this tax or investment advice?","acceptedAnswer":{"@type":"Answer","text":"No. Nori gives analysis of your own numbers. Your accountant still handles your taxes, and lenders set their own requirements."}},
+{"@type":"Question","name":"Who is behind Nori?","acceptedAnswer":{"@type":"Answer","text":"Nori is made by Nori Cap, founded by a former Wall Street M&A banker and private equity investor. Questions go straight to pa@noricap.com."}},
 {"@type":"Question","name":"Is my data safe?","acceptedAnswer":{"@type":"Answer","text":"Only you and the people you invite can see it. Each company's data is kept separate, connection keys are encrypted, and we never sell or share your data. Nori isn't independently certified yet."}}
 ]}</script>
 <style>
@@ -232,6 +236,30 @@ footer .disc{flex-basis:100%;font-size:13px;margin:0}
   .nav nav{order:3;width:100%;margin-left:0;gap:18px}
   .nav .btn{margin-left:auto}
 }
+/* Carousels */
+.cs .cs-head{display:flex;flex-wrap:wrap;gap:12px 48px;align-items:flex-end;justify-content:space-between}
+.cs-nav{display:flex;gap:8px}
+.cs-btn{width:44px;height:44px;border-radius:12px;border:1px solid var(--rule-2);background:#fff;color:var(--ink);font:500 18px/1 var(--sans);cursor:pointer}
+.cs-btn:hover{background:var(--stone)}.cs-btn:disabled{opacity:.35;cursor:default}
+.cs-track{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-left:24px;padding:4px 24px 14px;margin:40px -24px 0;scrollbar-width:thin;scrollbar-color:var(--rule-2) transparent;scroll-behavior:smooth}
+.cs-track > *{flex:0 0 min(400px,84%);scroll-snap-align:start}
+.cs-track.wide > *{flex-basis:min(560px,88%)}
+.cs-card{background:#fff;border-radius:20px;padding:28px;display:flex;flex-direction:column;gap:14px;min-height:380px}
+.cs-k{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--brand-ink)}
+.cs-card h3{font-size:28px;line-height:1.12}
+.cs-card p{margin:0;font-size:16px;line-height:1.55;color:var(--ink-2)}
+.cs-card ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:15.5px;line-height:1.45;color:var(--ink-2)}
+.cs-card li b{color:var(--ink);font-weight:500}
+.cs-card.dark{background:var(--ink);color:#fff}.cs-card.dark p,.cs-card.dark ul{color:rgba(255,255,255,.72)}.cs-card.dark li b{color:#fff}.cs-card.dark .cs-k{color:var(--accent)}.cs-card.dark a{color:#fff}
+.cs-card.stone{background:var(--stone)}
+.cs-card a{color:var(--brand-ink)}
+.cs-cmp{width:100%;border-collapse:collapse;font-size:14.5px;line-height:1.35}
+.cs-cmp th,.cs-cmp td{text-align:left;padding:9px 8px 9px 0;border-bottom:1px solid var(--rule);vertical-align:top}
+.cs-cmp th{font-weight:600;font-size:13px}.cs-cmp td:first-child{color:var(--ink-2);width:30%}
+.cs-flag{display:flex;flex-direction:column;gap:4px;border:1px solid var(--rule);border-radius:12px;padding:12px 14px;font-size:14.5px;line-height:1.35;background:#fff}
+.cs-t{font-size:11px;letter-spacing:.06em;text-transform:uppercase}
+.cs-q{background:var(--stone);border-radius:12px;padding:12px 14px;font-size:15px;line-height:1.4}
+@media (max-width:600px){.cs-nav{display:none}}
 </style>
 </head>
 <body>
@@ -293,6 +321,25 @@ footer .disc{flex-basis:100%;font-size:13px;margin:0}
     </div>
   </section>
 
+  <section class="cs" aria-label="Sound familiar?">
+    <div class="wrap">
+    <div class="cs-head">
+      <div style="display: flex; flex-direction: column; gap: 14px; max-width: 760px">
+        <h2 class="serif" style="margin: 0; font-size: clamp(36px, 4.4vw, 56px); line-height: 1.05">Reports tell you what happened. Nori tells you what to do next.</h2>
+        <p style="margin: 0; font-size: 19px; line-height: 1.5; color: #666666">Sound familiar?</p>
+      </div>
+      <div class="cs-nav"><button type="button" class="cs-btn" data-dir="-1" aria-label="Previous">←</button><button type="button" class="cs-btn" data-dir="1" aria-label="Next">→</button></div>
+    </div>
+    <div class="cs-track" tabindex="0" aria-label="Problems Nori solves">
+      <article class="cs-card"><span class="cs-k">The forecast</span><h3>“The spreadsheet was right for about a week.”</h3><p>A cash forecast takes a day to build and goes stale the moment a customer pays late or a supplier raises prices.</p><p style="margin-top:auto;color:#120C08"><b style="font-weight:500">With Nori:</b> built in minutes from your books and refreshed every day.</p></article>
+      <article class="cs-card"><span class="cs-k">The decision</span><h3>“Can we afford it?” has no quick answer.</h3><p>A hire, a truck, a second location. Every big decision waits for someone to pull the numbers together.</p><p style="margin-top:auto;color:#120C08"><b style="font-weight:500">With Nori:</b> ask the question and test the change before you commit.</p></article>
+      <article class="cs-card"><span class="cs-k">The bank</span><h3>The lender wants a package you don't have.</h3><p>Coverage, a debt schedule, a balance sheet, projections. Pulling it together by hand takes weeks, right when you need the money.</p><p style="margin-top:auto;color:#120C08"><b style="font-weight:500">With Nori:</b> built from your books as Excel, PDF and a private link.</p></article>
+      <article class="cs-card dark"><span class="cs-k">By hand vs with Nori</span><h3>The same work, without the evenings.</h3>
+        <table class="cs-cmp" style="color:#FFFFFF"><tr><td style="color:rgba(255,255,255,.6)">Monthly report</td><td>An evening in spreadsheets → written for you, with budget vs actual</td></tr><tr><td style="color:rgba(255,255,255,.6)">A duplicate payment</td><td>Found if someone happens to look → flagged with the dollar amount</td></tr><tr><td style="color:rgba(255,255,255,.6)">Lender package</td><td>Weeks of gathering statements → built from your books</td></tr></table></article>
+    </div>
+    </div>
+  </section>
+
   <section>
     <div class="wrap big">
       <div class="copy">
@@ -339,6 +386,29 @@ footer .disc{flex-basis:100%;font-size:13px;margin:0}
         </div>
       </div>
       <p class="note">Screens show an example business.</p>
+    </div>
+  </section>
+
+  <section class="cs" aria-label="What Nori does">
+    <div class="wrap">
+    <div class="cs-head">
+      <div style="display: flex; flex-direction: column; gap: 14px; max-width: 760px">
+        <h2 class="serif" style="margin: 0; font-size: clamp(36px, 4.4vw, 56px); line-height: 1.05">Track. Forecast. Fund. Ask.</h2>
+        <p style="margin: 0; font-size: 19px; line-height: 1.5; color: #666666">Everything a CFO would do with your numbers, every day.</p>
+      </div>
+      <div class="cs-nav"><button type="button" class="cs-btn" data-dir="-1" aria-label="Previous">←</button><button type="button" class="cs-btn" data-dir="1" aria-label="Next">→</button></div>
+    </div>
+    <div class="cs-track" tabindex="0" aria-label="What Nori does">
+      <article class="cs-card"><span class="cs-k">Track</span><h3>Know how you're really doing, every month.</h3><ul><li><b>Monthly CFO report</b> in plain English.</li><li><b>Budget vs actual.</b> Set a budget from last year in a minute; every miss over 5% explained.</li><li><b>Customer retention.</b> Who came back, how much revenue you kept, who you lost.</li></ul></article>
+      <article class="cs-card"><span class="cs-k">Forecast</span><h3>See cash trouble weeks before it arrives.</h3><ul><li><b>13 weeks, week by week:</b> when customers are likely to pay and when bills fall due.</li><li><b>Add what the books miss:</b> loan payments, owner draws, taxes.</li><li><b>A warning</b> before cash drops below the minimum you set.</li></ul></article>
+      <article class="cs-card stone"><span class="cs-k">Speaks up</span><h3>It doesn't wait to be asked.</h3>
+        <div class="cs-flag"><span class="cs-t" style="color:#B54700">Act now · example</span>A customer owes $96,000 more than 60 days late</div>
+        <div class="cs-flag"><span class="cs-t" style="color:#B54700">Act now · example</span>Possible duplicate payment: $4,180 fuel bill</div>
+        <div class="cs-flag"><span class="cs-t" style="color:#1A7398">Review · example</span>Fuel and repairs up 18% while sales grew 4%</div></article>
+      <article class="cs-card"><span class="cs-k">Ask</span><h3>Get answers in plain English.</h3><div class="cs-q">“Why am I making more sales but less profit?”</div><div class="cs-q">“When could we get tight on cash?”</div><div class="cs-q">“How much could we borrow for a second location?”</div><p>Every answer comes from your books, with the figures behind it. Nori explains the numbers; it never invents them.</p></article>
+      <article class="cs-card"><span class="cs-k">What if…</span><h3>Test a decision before you make it.</h3><p>Change prices, sales volume, supplier costs or add a new monthly cost, and see what it does to your earnings, loan coverage and 12-month cash.</p><p style="margin-top:auto;color:#120C08">On the Funding page.</p></article>
+      <article class="cs-card dark"><span class="cs-k">Fund</span><h3>Walk into the bank ready.</h3><ul><li><b>What you can borrow</b> at today's earnings.</li><li><b>Debt service coverage</b> today and with the loan you want.</li><li><b>A lender package</b> to send as Excel or share by private link.</li></ul></article>
+    </div>
     </div>
   </section>
 
@@ -476,6 +546,29 @@ footer .disc{flex-basis:100%;font-size:13px;margin:0}
     </div>
   </section>
 
+  <section class="cs" aria-label="Why owners trust Nori">
+    <div class="wrap">
+    <div class="cs-head">
+      <div style="display: flex; flex-direction: column; gap: 14px; max-width: 760px">
+        <h2 class="serif" style="margin: 0; font-size: clamp(36px, 4.4vw, 56px); line-height: 1.05">Built for business owners. Not financial experts.</h2>
+        <p style="margin: 0; font-size: 19px; line-height: 1.5; color: #666666">No jargon, no endless spreadsheets, no sugarcoating. Just a clearer picture and what to do next.</p>
+      </div>
+      <div class="cs-nav"><button type="button" class="cs-btn" data-dir="-1" aria-label="Previous">←</button><button type="button" class="cs-btn" data-dir="1" aria-label="Next">→</button></div>
+    </div>
+    <div class="cs-track wide" tabindex="0" aria-label="Why owners trust Nori">
+      <article class="cs-card dark"><span class="cs-k">Who's behind it</span><h3>Built by someone who has sat on the lender's side of the table.</h3><p>Nori was founded by a former Wall Street M&amp;A banker and private equity investor who has spent years deciding what a business is worth and how much debt it can carry.</p><ul><li><b>What lenders check, built in:</b> coverage, adjusted EBITDA, working capital, a debt schedule.</li><li><b>Every figure traceable</b> to the transactions it came from.</li></ul><p style="margin-top:auto">Questions go straight to the founder: <a href="mailto:pa@noricap.com" style="color:#FFFFFF">pa@noricap.com</a></p></article>
+      <article class="cs-card"><span class="cs-k">Your data</span><h3>Private by default.</h3><ul><li><b>We only read.</b> Nothing is posted, edited or deleted in your books.</li><li><b>No money moves.</b> Nori has no access to bank accounts, payroll or tax filings.</li><li><b>Delete any time</b> from Settings. We don't sell your data.</li></ul><p style="margin-top:auto">Works with QuickBooks Online, Xero, and exports from any accounting system.</p></article>
+      <article class="cs-card"><span class="cs-k">How Nori compares</span><h3>A CFO's view, for a fraction of the cost.</h3>
+        <table class="cs-cmp"><tr><th></th><th>Nori</th><th>Spreadsheet</th><th>Fractional CFO</th></tr>
+        <tr><td>Cost</td><td>From $499 a month</td><td>Free, plus your evenings</td><td>Often $3,000–$12,000 a month*</td></tr>
+        <tr><td>Up to date</td><td>Every day</td><td>When someone updates it</td><td>Usually monthly</td></tr>
+        <tr><td>Spots problems</td><td>Flags each one in dollars</td><td>Only if you look</td><td>At the next meeting</td></tr></table>
+        <p style="font-size:13px;margin-top:auto">*Pilot, “Fractional CFO cost guide”, checked November 2, 2026. <a href="/compare/">Full comparison</a></p></article>
+      <article class="cs-card stone"><span class="cs-k">Who it's for</span><h3>Owners who have outgrown guesswork, and their advisors.</h3><ul><li><b>Owners and finance leads:</b> a CFO's view without hiring one.</li><li><b>Accountants and advisors:</b> clients invite you free. Every client from one login, with issues already sized in dollars.</li></ul><p style="margin-top:auto"><a href="/for-accountants">How it works for accountants →</a></p></article>
+    </div>
+    </div>
+  </section>
+
   <section id="faq">
     <div class="wrap faq">
       <h2>FAQ</h2>
@@ -485,8 +578,12 @@ footer .disc{flex-basis:100%;font-size:13px;margin:0}
         <details><summary>Do I need to change my existing systems?<span class="plus" aria-hidden="true">+</span></summary><p>No. Nori only reads your books. It never posts, edits or deletes anything, moves money, or files anything.</p></details>
         <details><summary>What does my accountant still handle?<span class="plus" aria-hidden="true">+</span></summary><p>The books and your taxes. Nori reads those books and turns them into answers, warnings and a forecast. Invite your accountant free, so your meetings start with the answers.</p></details>
         <details><summary>How long does setup take?<span class="plus" aria-hidden="true">+</span></summary><p>Minutes. Connected books import the last 24 months, usually in a minute or two, then refresh every day.</p></details>
-        <details id="pricing"><summary>What does Nori cost?<span class="plus" aria-hidden="true">+</span></summary><p>$1,500 a month per company after a 7-day free trial. That includes everything in Nori plus a 30-minute review call each month to go through your numbers and next steps. You see a first look at your own results before you add a card, and you can cancel anytime in Settings. Your team and your accountant join free. Accountants and advisors with 5 or more client companies can ask about partner pricing.</p></details>
+        <details id="pricing"><summary>What does Nori cost?<span class="plus" aria-hidden="true">+</span></summary><p>It depends on how you use Nori and what your business needs. Plans start at $499 a month per company, after a 7-day free trial. You see a first look at your own results before you add a card, and you can cancel anytime in Settings. Your team and your accountant join free. Accountants and advisors with 5 or more client companies can ask about partner pricing.</p></details>
         <details><summary>Can Nori help me find funding?<span class="plus" aria-hidden="true">+</span></summary><p>Yes. The Funding page shows your debt service coverage today and with the loan you want, the largest loan your earnings support, and builds a lender package from your books. Download it as a PDF and an Excel file, or send your lender a private link that expires after 30 days. Nori doesn't lend money or make introductions for a fee.</p></details>
+        <details><summary>What if my books are messy?<span class="plus" aria-hidden="true">+</span></summary><p>Most are. Nori tells you how much spending it couldn't place, and uncategorized spending is often a finding in its own right.</p></details>
+        <details><summary>Am I too small for Nori?<span class="plus" aria-hidden="true">+</span></summary><p>If you keep books and have customers and suppliers to track, Nori has something to work with. It works best with at least a year of history; with only a few months, trends and the forecast are rougher, and Nori says so.</p></details>
+        <details><summary>Is this tax or investment advice?<span class="plus" aria-hidden="true">+</span></summary><p>No. Nori gives analysis of your own numbers. Your accountant still handles your taxes, and lenders set their own requirements.</p></details>
+        <details><summary>Who is behind Nori?<span class="plus" aria-hidden="true">+</span></summary><p>Nori is made by Nori Cap, founded by a former Wall Street M&amp;A banker and private equity investor. Questions go straight to pa@noricap.com.</p></details>
         <details><summary>Is my data safe?<span class="plus" aria-hidden="true">+</span></summary><p>Only you and the people you invite can see it. Each company's data is kept separate, connection keys are encrypted, and we never sell or share your data. Nori isn't independently certified yet.</p></details>
         <div class="ask">
           <form class="pform" id="ask-form" name="questions" method="POST" action="/thanks.html" data-netlify="true" netlify-honeypot="bot-field" novalidate>
@@ -536,6 +633,15 @@ footer .disc{flex-basis:100%;font-size:13px;margin:0}
   var nav=document.getElementById('nav');
   function onScroll(){ nav.classList.toggle('scrolled', window.scrollY>8); }
   window.addEventListener('scroll',onScroll,{passive:true}); onScroll();
+
+  // Carousels: arrow buttons scroll one card; disabled at the ends.
+  Array.prototype.forEach.call(document.querySelectorAll('section.cs'),function(sec){
+    var tr=sec.querySelector('.cs-track'), bs=sec.querySelectorAll('.cs-btn'); if(!tr||bs.length<2) return;
+    function step(){ var c=tr.firstElementChild; return c ? c.getBoundingClientRect().width+16 : 400; }
+    function upd(){ bs[0].disabled=tr.scrollLeft<4; bs[1].disabled=tr.scrollLeft+tr.clientWidth>=tr.scrollWidth-4; }
+    Array.prototype.forEach.call(bs,function(b){ b.addEventListener('click',function(){ tr.scrollBy({left:step()*Number(b.getAttribute('data-dir')),behavior:'smooth'}); }); });
+    tr.addEventListener('scroll',upd,{passive:true}); window.addEventListener('resize',upd); upd();
+  });
 
   // Links to /#pricing open the cost answer in the FAQ
   function openHash(){ var el=location.hash&&document.getElementById(location.hash.slice(1)); if(el&&el.tagName==='DETAILS'){ el.open=true; } }
