@@ -93,6 +93,16 @@ section{padding:120px 0 0}
 .hero h1{font-weight:300;font-size:clamp(48px,7.4vw,104px);line-height:.95;letter-spacing:-.03em;color:#fff}
 .hero-copy{flex:1 1 460px;min-width:0;display:flex;flex-direction:column;gap:22px;color:#fff}
 .hero-copy p{margin:0;font-size:22px;color:rgba(255,255,255,.88)}
+/* hero reel: one win at a time, looping (all five show as a list if motion is reduced) */
+.reel{display:flex;flex-direction:column;gap:8px;max-width:620px}
+.reel-k{font-size:12px!important;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.75)!important}
+.reel-k span{text-transform:none;letter-spacing:0}
+.reel ul{list-style:none;margin:0;padding:0;display:grid}
+.reel li{grid-area:1/1;display:flex;gap:10px;align-items:flex-start;font-size:17px;line-height:1.45;color:#fff;opacity:0;animation:reel 20s infinite;animation-delay:calc(var(--i) * 4s)}
+.reel li svg{flex:0 0 16px;margin-top:4px}
+.reel li b{font-weight:600}
+@keyframes reel{0%{opacity:0;transform:translateY(10px)}3%{opacity:1;transform:none}18%{opacity:1;transform:none}21%{opacity:0;transform:translateY(-10px)}100%{opacity:0}}
+@media (prefers-reduced-motion:reduce){.reel ul{gap:8px}.reel li{grid-area:auto;opacity:1;animation:none}}
 .hero-cta{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
 .hero-cta span{font-size:15px;color:rgba(255,255,255,.88)}
 
@@ -284,6 +294,16 @@ footer .disc{flex-basis:100%;font-size:13px;margin:0}
         <div class="hero-copy">
           <h1>You run a business.<br>Not a spreadsheet.</h1>
           <p>Let Nori watch your money.</p>
+          <div class="reel" aria-label="Nori wins, illustrative examples">
+            <p class="reel-k">Nori wins <span>· examples</span></p>
+            <ul>
+              <li style="--i:0"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="8" fill="#259BC6"/><path d="M4.6 8.3l2.2 2.2 4.6-4.8" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Collected <b>$152,000</b> before payroll by following up on overdue invoices flagged in the cash forecast.</span></li>
+              <li style="--i:1"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="8" fill="#259BC6"/><path d="M4.6 8.3l2.2 2.2 4.6-4.8" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Uncovered <b>$122,800</b> in lost profit by comparing what jobs were quoted at with what they actually cost.</span></li>
+              <li style="--i:2"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="8" fill="#259BC6"/><path d="M4.6 8.3l2.2 2.2 4.6-4.8" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Cut borrowing needs by <b>$140,000</b> by forecasting when inventory bills were due and when customer payments would arrive.</span></li>
+              <li style="--i:3"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="8" fill="#259BC6"/><path d="M4.6 8.3l2.2 2.2 4.6-4.8" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Traced a <b>$350,780</b> drop in gross profit to rising costs, even as sales climbed.</span></li>
+              <li style="--i:4"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="8" fill="#259BC6"/><path d="M4.6 8.3l2.2 2.2 4.6-4.8" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Calculated the sales needed to make a hire and found it would take <b>$80,000</b> in additional monthly revenue to cover the cost.</span></li>
+            </ul>
+          </div>
           <div class="hero-cta"><a class="btn light" href="https://app.noricap.com/signup">Get started</a><span>See your own results before you add a card.</span></div>
         </div>
       </div>
