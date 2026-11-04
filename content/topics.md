@@ -5,7 +5,7 @@ with the date and URL. Add new topics at the end of the list they belong to. Phi
 can reorder, add or strike topics any time.
 
 ## Borrowing and lenders
-- [ ] How much can a construction company borrow? (coverage, equipment loans, lines of credit)
+- [x] How much can a construction company borrow? (coverage, equipment loans, lines of credit) (2026-11-04, https://noricap.com/guides/construction-company-borrowing.html)
 - [ ] How much can an HVAC or plumbing business borrow?
 - [ ] How much can a restaurant borrow, and from whom?
 - [ ] How much can a trucking company borrow? (equipment finance vs term loans)
