@@ -38,7 +38,7 @@ Philip and Pratibha both work on this repo, each with their own Claude sessions.
 
 ## Facts on the site must be true
 
-- Price on the site: based on usage and needs, from $499 a month per company, after a 7-day free trial (changed November 4, 2026, by Pratibha); team and accountant join free; partner pricing for firms with 5+ client companies. The app checkout and terms.html still say $1,500 a month until Philip sets up the plans in Stripe.
+- Price: from $499 a month per company, based on usage and needs, after a 7-day free trial (set November 4, 2026). The app checkout and terms.html charge $499 a month; higher plans don't exist yet, so don't describe any. Team and accountant join free; partner pricing for firms with 5+ client companies.
 - Only describe features the app actually has. Check the app repo if unsure.
 - Competitor details (Fathom, LivePlan, fractional CFO costs) must cite a source and the date checked; refresh them if you touch the compare page.
 - Lender coverage: many banks look for 1.25x; SBA 7(a) is 1.15x for most loans and, from October 1, 2026 (SOP 50 10 8.1), reported as 1.25x for business acquisitions.
