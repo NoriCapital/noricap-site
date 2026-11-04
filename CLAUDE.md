@@ -7,7 +7,7 @@ Philip and Pratibha both work on this repo, each with their own Claude sessions.
 ## Pushing to main publishes the site
 
 - Netlify deploys every push to `main` to noricap.com within a minute or two. There is no staging site.
-- Netlify's Personal plan only builds pushes from Philip's GitHub account on this private repo. Pushes from Pratibha's account show "Build blocked: Unrecognized Git contributor" in Netlify's deploy list; that is not a build-credit or code problem, and pushing again won't help. Pratibha's sessions push to `main` as usual and tell her; Philip's session then checks the changes and publishes them by pushing from his account. Don't upgrade the plan or make the repo public without Philip's decision.
+- This repo is public on GitHub (since November 4, 2026), so Netlify builds pushes from both Philip's and Pratibha's accounts. (While it was private, the $9 plan blocked Pratibha's pushes with "Build blocked: Unrecognized Git contributor".) Because anyone can read this repo and its history, never commit keys, passwords, personal addresses or customer data; keys live in Netlify's environment settings.
 - Before pushing, open the changed pages locally (`python3 -m http.server 8088` in this folder) at desktop and phone width (about 390px). No sideways scrolling, no console errors.
 - Pull before you start (`git pull --rebase`). Two people work here; agree who has the repo that day for big changes, or use a branch.
 - Each deploy uses Netlify build credits on the $9 Personal plan, so batch small edits into one push.
