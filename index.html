@@ -82,6 +82,7 @@ section{padding:120px 0 0}
 .nav nav{display:flex;gap:26px;flex-wrap:wrap;margin-left:auto;font-size:15px}
 .nav nav a{text-decoration:none}
 .nav .btn{padding:11px 20px;font-size:15px}
+.nav-in-m{display:none;text-decoration:none;font-size:15px}
 
 /* hero */
 .hero{padding:8px 16px 0}
@@ -102,7 +103,7 @@ section{padding:120px 0 0}
 
 /* features */
 .head{display:flex;flex-direction:column;gap:14px;max-width:760px;margin-bottom:44px}
-.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:16px}
 .feat{overflow:hidden;display:flex;flex-direction:column}
 .feat .art{padding:28px;min-height:260px;display:flex;flex-direction:column;justify-content:flex-end;gap:10px}
 .feat .txt{padding:24px 28px 30px;display:flex;flex-direction:column;gap:8px}
@@ -233,15 +234,21 @@ footer .disc{flex-basis:100%;font-size:13px;margin:0}
   .big .pic{height:440px}
   .tile{min-height:320px}
   .story{padding:28px}
-  .nav nav{order:3;width:100%;margin-left:0;gap:18px}
-  .nav .btn{margin-left:auto}
+  .nav .wrap{gap:10px 16px;padding-top:10px;padding-bottom:10px}
+  .nav nav{order:3;width:100%;margin-left:0;gap:14px;justify-content:space-between;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;font-size:14px;white-space:nowrap}
+  .nav nav::-webkit-scrollbar{display:none}
+  .nav .btn{margin-left:0}
+  .nav .nav-in{display:none}
+  .nav-in-m{display:inline;margin-left:auto}
 }
+@media (max-width:360px){.brand{font-size:24px}.nav .btn{padding:10px 14px;font-size:14px}.nav-in-m{font-size:14px}.nav nav{gap:10px}}
 /* Carousels */
 .cs .cs-head{display:flex;flex-wrap:wrap;gap:12px 48px;align-items:flex-end;justify-content:space-between}
 .cs-nav{display:flex;gap:8px}
 .cs-btn{width:44px;height:44px;border-radius:12px;border:1px solid var(--rule-2);background:#fff;color:var(--ink);font:500 18px/1 var(--sans);cursor:pointer}
 .cs-btn:hover{background:var(--stone)}.cs-btn:disabled{opacity:.35;cursor:default}
-.cs-track{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-left:24px;padding:4px 24px 14px;margin:40px -24px 0;scrollbar-width:thin;scrollbar-color:var(--rule-2) transparent;scroll-behavior:smooth}
+.cs-track{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-left:24px;padding:4px 24px 14px;margin:40px -24px 0;scrollbar-width:none;scroll-behavior:smooth}
+.cs-track::-webkit-scrollbar{display:none}
 .cs-track > *{flex:0 0 min(400px,84%);scroll-snap-align:start}
 .cs-track.wide > *{flex-basis:min(560px,88%)}
 .cs-card{background:#fff;border-radius:20px;padding:28px;display:flex;flex-direction:column;gap:14px;min-height:380px}
@@ -267,7 +274,8 @@ footer .disc{flex-basis:100%;font-size:13px;margin:0}
 <header class="nav" id="nav">
   <div class="wrap">
     <a class="brand" href="#top" aria-label="Nori home"><svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><rect width="26" height="26" rx="7" fill="#120C08"/><path d="M7 19V7l12 12V7" fill="none" stroke="#F9F8F5" stroke-width="2.4" stroke-linejoin="round"/></svg>nori</a>
-    <nav aria-label="Main"><a href="#how">How it works</a><a href="#tools">Free tools</a><a href="/for-accountants.html">For accountants</a><a href="https://app.noricap.com/login">Sign in</a></nav>
+    <nav aria-label="Main"><a href="#how">How it works</a><a href="#tools">Free tools</a><a href="/for-accountants.html">For accountants</a><a class="nav-in" href="https://app.noricap.com/login">Sign in</a></nav>
+    <a class="nav-in-m" href="https://app.noricap.com/login">Sign in</a>
     <a class="btn" href="https://app.noricap.com/signup">Get started</a>
   </div>
 </header>
