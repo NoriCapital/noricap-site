@@ -1,4 +1,4 @@
-// Adds an email to the Unboring newsletter on Beehiiv. Needs BEEHIIV_API_KEY in Netlify's
+// Adds an email to the Tilo newsletter on Beehiiv. Needs BEEHIIV_API_KEY in Netlify's
 // environment variables; until it's set, the page falls back to Beehiiv's own sign-up page.
 const PUB = process.env.BEEHIIV_PUBLICATION_ID || 'pub_33fc39da-0050-4b90-9654-59c87c8b3bf5';
 // Welcome automations in Beehiiv (each has an "Added by API" trigger). Beehiiv's "Signed up"

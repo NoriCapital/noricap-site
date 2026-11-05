@@ -1,6 +1,12 @@
 # noricap.com (marketing site)
 
-The public website for Nori, the AI CFO for owner-led businesses, made by Nori Capital LLC (d/b/a Nori Cap). The app is `NoriCapital/noricap-app` (app.noricap.com); the newsletter is Unboring on Beehiiv.
+The public website for Tilo, the AI CFO for owner-led businesses, made by Nori Capital LLC (d/b/a Nori Cap). The app is `NoriCapital/noricap-app` (app.noricap.com); the newsletter is Tilo on Beehiiv (unboring.beehiiv.com).
+
+## Brand: Tilo (renamed from Nori and Unboring on November 5, 2026)
+
+- Everything visitors see says Tilo: the product ("Ask Tilo", "Tilo wins"), the newsletter and the logo (a white T in a near-black rounded square, wordmark "tilo"). Never write "Nori" or "Unboring" as a brand in new pages.
+- Unchanged for now, on purpose: web addresses (noricap.com, app.noricap.com, pa@noricap.com, unboring.beehiiv.com links), file names such as `what-nori-does.html`, the GitHub repo names, and form field names (`unboring` opt-in).
+- Legal name stays Nori Capital LLC (d/b/a Nori Cap) in the terms, privacy policy and footers until Tilo LLC, a Wyoming LLC being formed in November 2026, exists with its EIN and bank account; Philip will say when to switch.
 
 Philip and Pratibha both work on this repo, each with their own Claude sessions. Read this file first and follow it.
 
@@ -31,8 +37,8 @@ Philip and Pratibha both work on this repo, each with their own Claude sessions.
 - Branding (same in the app): background #F9F8F5, ink #120C08, grey #666666, stone #F3F0E9 / #EDE8DE, rules #E3DDCF / #D8D1C0, sky blue #259BC6 (text #1A7398, soft #DDF3F9), orange accent #FF740A (soft #FFE9D6). Headlines Newsreader (300–400), text DM Sans. Buttons near-black, 12px corners.
 - Homepage examples (freight company, Maine builder, solopreneur) are illustrative and labelled so; replace them with real customer results only with Philip's approval and the customer's permission.
 - Forms (funding, partners, questions, template) are Netlify Forms, found by `data-netlify="true"` and their `name`. A new form needs a new unique name; renaming one starts a new submissions list.
-- Newsletter sign-ups on noricap.com are a "Subscribe for free" button to `https://unboring.beehiiv.com/subscribe` (with `utm_source=noricap.com` and `utm_medium=<where>`), so every reader goes through Unboring's own sign-up flow (survey, then recommended newsletters, which is how the newsletter earns). Don't add email fields that subscribe through the API, except the template form's opt-in.
-- `netlify/functions/subscribe.mjs` is now only for the template form's Unboring opt-in (welcome email `template-optin`). `netlify/functions/issues.mjs` serves the latest Unboring issues to the homepage (cached an hour); the HTML keeps a fallback list.
+- Newsletter sign-ups on noricap.com are a "Subscribe for free" button to `https://unboring.beehiiv.com/subscribe` (with `utm_source=noricap.com` and `utm_medium=<where>`), so every reader goes through Tilo's own sign-up flow (survey, then recommended newsletters, which is how the newsletter earns). Don't add email fields that subscribe through the API, except the template form's opt-in.
+- `netlify/functions/subscribe.mjs` is now only for the template form's Tilo opt-in (welcome email `template-optin`). `netlify/functions/issues.mjs` serves the latest Tilo issues to the homepage (cached an hour); the HTML keeps a fallback list.
 - Bot protection on every form: anything sent within 3 seconds of the page loading, or with the hidden `bot-field` / `website` field filled, gets a normal-looking thank-you but nothing is sent. The newsletter function also drops sign-ups whose `elapsed` is missing or under 3,000 ms. Keep `elapsed` in any new call to it.
 - `_redirects` holds short URLs and old addresses; `sitemap.xml` lists every public page. Update both when you add, rename or remove a page.
 
@@ -47,7 +53,7 @@ Philip and Pratibha both work on this repo, each with their own Claude sessions.
 
 ## Writing
 
-Plain English for business owners: short sentences, no jargon, concrete numbers. Calm and trustworthy, not hype. Nori gives analysis, not tax, legal or investment advice.
+Plain English for business owners: short sentences, no jargon, concrete numbers. Calm and trustworthy, not hype. Tilo gives analysis, not tax, legal or investment advice.
 
 ## Daily search pages (weekday scheduled task)
 
@@ -55,8 +61,8 @@ One new guide each weekday, written for an owner who typed the question into Goo
 
 1. `git pull --rebase`. Take the first unchecked topic in `content/topics.md` (not public; blocked in `_redirects`). Skip any topic already covered by a page in `guides/`.
 2. Research it with web search. Every number, rule or rate needs a current, citable source (SBA, IRS, Federal Reserve, BLS, RMA/industry bodies, lender sites). No invented statistics, examples presented as real, or quotes. Worked examples must say they are examples and the arithmetic must be checked by running it.
-3. Write `guides/<short-slug>.html` by copying the structure and styles of `guides/profit-margin-small-business.html`: label, H1 that matches the question, a short lede, plain-English sections, at least one worked example in a `.calc` block, a link to the most relevant calculator (`/calculators/...`) and to the 13-week template (`/#template`), the green Nori call-to-action box, and a "Sources" list with links and the date checked. 900 to 1,500 words. Title under 60 characters, description under 155.
-4. Mention Nori only where it genuinely helps, and only features the app actually has. No hype, no competitor bashing.
+3. Write `guides/<short-slug>.html` by copying the structure and styles of `guides/profit-margin-small-business.html`: label, H1 that matches the question, a short lede, plain-English sections, at least one worked example in a `.calc` block, a link to the most relevant calculator (`/calculators/...`) and to the 13-week template (`/#template`), the green Tilo call-to-action box, and a "Sources" list with links and the date checked. 900 to 1,500 words. Title under 60 characters, description under 155.
+4. Mention Tilo only where it genuinely helps, and only features the app actually has. No hype, no competitor bashing.
 5. Add the page to `guides/index.html` (newest first) and to `sitemap.xml`. Tick the topic in `content/topics.md` with the date and URL.
 6. Check it locally at desktop and phone width (no sideways scrolling, no console errors), then commit ("Guide: <title>") and push. Netlify publishes it.
 7. End the run with a one-paragraph summary: the page title, its URL, the main sources, and anything that needs a person's attention.

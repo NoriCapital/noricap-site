@@ -1,6 +1,6 @@
 # noricap.com
 
-The marketing site for Nori, the AI CFO. Plain static HTML with no build step.
+The marketing site for Tilo, the AI CFO. Plain static HTML with no build step.
 
 Netlify deploys this repository automatically on every push to `main`:
 build command none, publish directory `.` (the repository root).

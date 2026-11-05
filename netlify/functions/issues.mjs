@@ -1,4 +1,4 @@
-// The latest Unboring issues for the newsletter section on noricap.com: title, subtitle, date and
+// The latest Tilo issues for the newsletter section on noricap.com: title, subtitle, date and
 // link, straight from Beehiiv. Cached at Netlify's edge for an hour so Beehiiv is asked rarely.
 const PUB = process.env.BEEHIIV_PUBLICATION_ID || 'pub_33fc39da-0050-4b90-9654-59c87c8b3bf5';
 const json = (status, body, maxAge) => new Response(JSON.stringify(body), {
