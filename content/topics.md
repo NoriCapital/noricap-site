@@ -6,7 +6,7 @@ can reorder, add or strike topics any time.
 
 ## Borrowing and lenders
 - [x] How much can a construction company borrow? (coverage, equipment loans, lines of credit) (2026-11-04, https://noricap.com/guides/construction-company-borrowing.html)
-- [ ] How much can an HVAC or plumbing business borrow?
+- [x] How much can an HVAC or plumbing business borrow? (2026-11-05, https://noricap.com/guides/hvac-plumbing-business-borrowing.html)
 - [ ] How much can a restaurant borrow, and from whom?
 - [ ] How much can a trucking company borrow? (equipment finance vs term loans)
 - [ ] What is debt service coverage ratio (DSCR), with a worked example for a small business
