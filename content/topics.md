@@ -8,7 +8,7 @@ can reorder, add or strike topics any time.
 - [x] How much can a construction company borrow? (coverage, equipment loans, lines of credit) (2026-11-04, https://noricap.com/guides/construction-company-borrowing.html)
 - [x] How much can an HVAC or plumbing business borrow? (2026-11-05, https://noricap.com/guides/hvac-plumbing-business-borrowing.html)
 - [x] How much can a restaurant borrow, and from whom? (2026-11-06, https://noricap.com/guides/restaurant-borrowing.html)
-- [ ] How much can a trucking company borrow? (equipment finance vs term loans)
+- [x] How much can a trucking company borrow? (equipment finance vs term loans) (2026-11-09, https://noricap.com/guides/trucking-company-borrowing.html)
 - [ ] What is debt service coverage ratio (DSCR), with a worked example for a small business
 - [ ] SBA 7(a) vs SBA 504 loans: which one fits what you're buying
 - [ ] What banks ask for in a small business loan application (checklist)
