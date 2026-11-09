@@ -1,3 +1,9 @@
+# Old addresses: everything on noricap.com moves to heytilo.ai (November 9, 2026)
+https://noricap.com/*        https://heytilo.ai/:splat    301!
+https://www.noricap.com/*    https://heytilo.ai/:splat    301!
+http://noricap.com/*         https://heytilo.ai/:splat    301!
+http://www.noricap.com/*     https://heytilo.ai/:splat    301!
+
 /sample    /    301
 /sample/*  /    301
 /demo      /    301

@@ -1,4 +1,4 @@
-# noricap.com
+# heytilo.ai (formerly noricap.com)
 
 The marketing site for Tilo, the AI CFO. Plain static HTML with no build step.
 

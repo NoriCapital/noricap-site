@@ -1,18 +1,19 @@
-# noricap.com (marketing site)
+# heytilo.ai (marketing site, formerly noricap.com)
 
-The public website for Tilo, the AI CFO for owner-led businesses, made by Nori Capital LLC (d/b/a Nori Cap). The app is `NoriCapital/noricap-app` (app.noricap.com); the newsletter is Tilo on Beehiiv (unboring.beehiiv.com).
+The public website for Tilo, the AI CFO for owner-led businesses, made by Nori Capital LLC (d/b/a Nori Cap). The app is `NoriCapital/noricap-app` (app.heytilo.ai); the newsletter is Tilo on Beehiiv (unboring.beehiiv.com).
 
 ## Brand: Tilo (renamed from Nori and Unboring on November 5, 2026)
 
 - Everything visitors see says Tilo: the product ("Ask Tilo", "Tilo wins"), the newsletter and the logo (a white T in a near-black rounded square, wordmark "tilo"). Never write "Nori" or "Unboring" as a brand in new pages.
-- Unchanged for now, on purpose: web addresses (noricap.com, app.noricap.com, pa@noricap.com, unboring.beehiiv.com links), file names such as `what-nori-does.html`, the GitHub repo names, and form field names (`unboring` opt-in).
+- Web addresses: the site is heytilo.ai and the app is app.heytilo.ai (moved November 9, 2026). noricap.com, www.noricap.com and www.heytilo.ai forward to heytilo.ai (Netlify primary domain); app.noricap.com forwards to app.heytilo.ai. Use heytilo.ai in every new link, canonical and sitemap entry. The domain heytilo.ai is registered at Squarespace (DNS there too; never touch its email records).
+- Unchanged for now, on purpose: email addresses (pa@noricap.com), unboring.beehiiv.com links, file names such as `what-nori-does.html`, the GitHub repo names, and form field names (`unboring` opt-in).
 - Legal name stays Nori Capital LLC (d/b/a Nori Cap) in the terms, privacy policy and footers until Tilo LLC, a Wyoming LLC being formed in November 2026, exists with its EIN and bank account; Philip will say when to switch.
 
 Philip and Pratibha both work on this repo, each with their own Claude sessions. Read this file first and follow it.
 
 ## Pushing to main publishes the site
 
-- Netlify deploys every push to `main` to noricap.com within a minute or two. There is no staging site.
+- Netlify deploys every push to `main` to heytilo.ai within a minute or two. There is no staging site.
 - This repo is public on GitHub (since November 4, 2026), so Netlify builds pushes from both Philip's and Pratibha's accounts. (While it was private, the $9 plan blocked Pratibha's pushes with "Build blocked: Unrecognized Git contributor".) Because anyone can read this repo and its history, never commit keys, passwords, personal addresses or customer data; keys live in Netlify's environment settings.
 - Before pushing, open the changed pages locally (`python3 -m http.server 8088` in this folder) at desktop and phone width (about 390px). No sideways scrolling, no console errors.
 - Pull before you start (`git pull --rebase`). Two people work here; agree who has the repo that day for big changes, or use a branch.
@@ -37,7 +38,7 @@ Philip and Pratibha both work on this repo, each with their own Claude sessions.
 - Branding (same in the app): background #F9F8F5, ink #120C08, grey #666666, stone #F3F0E9 / #EDE8DE, rules #E3DDCF / #D8D1C0, sky blue #259BC6 (text #1A7398, soft #DDF3F9), orange accent #FF740A (soft #FFE9D6). Headlines Newsreader (300–400), text DM Sans. Buttons near-black, 12px corners.
 - Homepage examples (freight company, Maine builder, solopreneur) are illustrative and labelled so; replace them with real customer results only with Philip's approval and the customer's permission.
 - Forms (funding, partners, questions, template) are Netlify Forms, found by `data-netlify="true"` and their `name`. A new form needs a new unique name; renaming one starts a new submissions list.
-- Newsletter sign-ups on noricap.com are a "Subscribe for free" button to `https://unboring.beehiiv.com/subscribe` (with `utm_source=noricap.com` and `utm_medium=<where>`), so every reader goes through Tilo's own sign-up flow (survey, then recommended newsletters, which is how the newsletter earns). Don't add email fields that subscribe through the API, except the template form's opt-in.
+- Newsletter sign-ups on heytilo.ai are a "Subscribe for free" button to `https://unboring.beehiiv.com/subscribe` (with `utm_source=heytilo.ai` and `utm_medium=<where>`), so every reader goes through Tilo's own sign-up flow (survey, then recommended newsletters, which is how the newsletter earns). Don't add email fields that subscribe through the API, except the template form's opt-in.
 - `netlify/functions/subscribe.mjs` is now only for the template form's Tilo opt-in (welcome email `template-optin`). `netlify/functions/issues.mjs` serves the latest Tilo issues to the homepage (cached an hour); the HTML keeps a fallback list.
 - Bot protection on every form: anything sent within 3 seconds of the page loading, or with the hidden `bot-field` / `website` field filled, gets a normal-looking thank-you but nothing is sent. The newsletter function also drops sign-ups whose `elapsed` is missing or under 3,000 ms. Keep `elapsed` in any new call to it.
 - `_redirects` holds short URLs and old addresses; `sitemap.xml` lists every public page. Update both when you add, rename or remove a page.

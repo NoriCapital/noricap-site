@@ -16,7 +16,7 @@ const add = (payload) => fetch(`https://api.beehiiv.com/v2/publications/${PUB}/s
 export default async (req) => {
   if (req.method !== 'POST') return json(405, { error: 'method' });
   const origin = req.headers.get('origin') || '';
-  if (origin && !/^https:\/\/([a-z0-9-]+\.)*noricap\.com$|^https:\/\/[a-z0-9-]+--[a-z0-9-]+\.netlify\.app$|^http:\/\/localhost(:\d+)?$/.test(origin)) return json(403, { error: 'origin' });
+  if (origin && !/^https:\/\/([a-z0-9-]+\.)*(noricap\.com|heytilo\.ai)$|^https:\/\/[a-z0-9-]+--[a-z0-9-]+\.netlify\.app$|^http:\/\/localhost(:\d+)?$/.test(origin)) return json(403, { error: 'origin' });
   let data;
   try { data = await req.json(); } catch { return json(400, { error: 'bad request' }); }
   if (data.website) return json(200, { ok: true }); // honeypot: bots fill hidden fields
@@ -28,7 +28,7 @@ export default async (req) => {
   const source = String(data.source || 'website').slice(0, 40);
   const base = {
     email, reactivate_existing: false, send_welcome_email: true,
-    utm_source: 'noricap.com', utm_medium: source, referring_site: 'https://noricap.com',
+    utm_source: 'heytilo.ai', utm_medium: source, referring_site: 'https://heytilo.ai',
   };
   let r = await add({ ...base, automation_ids: [source === 'template-optin' ? WELCOME_TEMPLATE : WELCOME_MAIN] });
   if (!r.ok && r.status >= 400 && r.status < 500 && r.status !== 429) {
