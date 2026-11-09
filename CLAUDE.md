@@ -1,13 +1,13 @@
 # heytilo.ai (marketing site, formerly noricap.com)
 
-The public website for Tilo, the AI CFO for owner-led businesses, made by Nori Capital LLC (d/b/a Nori Cap). The app is `NoriCapital/noricap-app` (app.heytilo.ai); the newsletter is Tilo on Beehiiv (unboring.beehiiv.com).
+The public website for Tilo, the AI CFO for owner-led businesses (legal entity for now: Nori Capital LLC). The app is `NoriCapital/noricap-app` (app.heytilo.ai); the newsletter is Tilo on Beehiiv (unboring.beehiiv.com).
 
 ## Brand: Tilo (renamed from Nori and Unboring on November 5, 2026)
 
 - Everything visitors see says Tilo: the product ("Ask Tilo", "Tilo wins"), the newsletter and the logo (a white T in a near-black rounded square, wordmark "tilo"). Never write "Nori" or "Unboring" as a brand in new pages.
 - Web addresses: the site is heytilo.ai and the app is app.heytilo.ai (moved November 9, 2026). noricap.com, www.noricap.com and www.heytilo.ai forward to heytilo.ai (Netlify primary domain); app.noricap.com forwards to app.heytilo.ai. Use heytilo.ai in every new link, canonical and sitemap entry. The domain heytilo.ai is registered at Squarespace (DNS there too; never touch its email records).
 - Contact email on the site is hello@heytilo.ai (an alias of pa@noricap.com in Google Workspace, set up November 9, 2026). Unchanged for now, on purpose: unboring.beehiiv.com links, file names such as `what-nori-does.html`, the GitHub repo names, and form field names (`unboring` opt-in).
-- Legal name stays Nori Capital LLC (d/b/a Nori Cap) in the terms, privacy policy and footers until Tilo LLC, a Wyoming LLC being formed in November 2026, exists with its EIN and bank account; Philip will say when to switch.
+- No "Nori" or "Nori Cap" anywhere visitors look (Philip, November 9, 2026): footers read "tilo · New York · hello@heytilo.ai" and disclaimers say Tilo. The only exception is the legal entity in the opening sentence of terms.html and privacy.html ("Nori Capital LLC, doing business as Tilo"), which switches to Tilo LLC once that Wyoming LLC exists with its EIN and bank account; Philip will say when.
 
 Philip and Pratibha both work on this repo, each with their own Claude sessions. Read this file first and follow it.
 
