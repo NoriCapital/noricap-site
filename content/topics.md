@@ -9,7 +9,7 @@ can reorder, add or strike topics any time.
 - [x] How much can an HVAC or plumbing business borrow? (2026-11-05, https://heytilo.ai/guides/hvac-plumbing-business-borrowing.html)
 - [x] How much can a restaurant borrow, and from whom? (2026-11-06, https://heytilo.ai/guides/restaurant-borrowing.html)
 - [x] How much can a trucking company borrow? (equipment finance vs term loans) (2026-11-09, https://heytilo.ai/guides/trucking-company-borrowing.html)
-- [ ] What is debt service coverage ratio (DSCR), with a worked example for a small business
+- [x] What is debt service coverage ratio (DSCR), with a worked example for a small business (2026-11-10, https://heytilo.ai/guides/debt-service-coverage-ratio.html)
 - [ ] SBA 7(a) vs SBA 504 loans: which one fits what you're buying
 - [ ] What banks ask for in a small business loan application (checklist)
 - [ ] How to calculate EBITDA and add-backs for a bank

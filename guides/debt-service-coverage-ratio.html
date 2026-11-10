@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>What Is Debt Service Coverage Ratio (DSCR)? · Tilo</title>
+<meta name="description" content="How to calculate DSCR, what ratio banks and the SBA want (1.10x to 1.25x), a worked small business example, and how to raise your coverage.">
+<meta property="og:title" content="What Is Debt Service Coverage Ratio (DSCR)? · Tilo">
+<meta property="og:description" content="How to calculate DSCR, what ratio banks and the SBA want (1.10x to 1.25x), a worked small business example, and how to raise your coverage.">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://heytilo.ai/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://heytilo.ai/guides/debt-service-coverage-ratio.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 26'%3E%3Crect width='26' height='26' rx='5' fill='%23120C08'/%3E%3Cpath d='M7.5 8h11M13 8v11' fill='none' stroke='%23F9F8F5' stroke-width='2.4' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0TMEK057R3"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-0TMEK057R3');</script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,300;6..72,400;6..72,500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap">
+<style>
+:root{--paper:#F9F8F5;--sheet:#FFFFFF;--rule:#E3DDCF;--ink:#120C08;--ink-2:#666666;--green:#120C08;--green-soft:#F3F0E9;--on-green:#FFFFFF;
+--display:"DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif;--body:"DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif;--mono:"DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif}
+*{box-sizing:border-box}
+:root{color-scheme:light}
+[hidden]{display:none!important}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:19px;line-height:1.65;-webkit-font-smoothing:antialiased}
+.wrap{max-width:760px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+header{border-bottom:1px solid var(--rule)}
+header .wrap{max-width:1160px;display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:14px}
+.brand{display:flex;align-items:center;gap:10px;font-family:var(--display);font-weight:800;font-size:22px;letter-spacing:-.03em;text-decoration:none;color:var(--ink)}
+.btn{display:inline-flex;font-family:var(--display);font-weight:700;font-size:15px;border-radius:6px;padding:11px 16px;text-decoration:none;background:var(--green);color:var(--on-green);white-space:nowrap}
+main{padding-block:56px 80px}
+.label{font-family:var(--mono);font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-2)}
+h1,h2,h3{font-family:var(--display);letter-spacing:-.02em;line-height:1.1;text-wrap:balance}
+h1{font-size:clamp(34px,5vw,52px);font-weight:800;margin:12px 0 18px}
+h2{font-size:26px;font-weight:800;margin:44px 0 10px}
+h3{font-size:20px;font-weight:700;margin:28px 0 6px}
+.lede{font-size:21px;color:var(--ink-2)}
+.meta{font-family:var(--mono);font-size:13px;color:var(--ink-2)}
+a{color:var(--green)}
+ul,ol{padding-left:22px}
+li{margin:6px 0}
+.box{background:var(--sheet);border:1px solid var(--rule);border-radius:10px;padding:18px 20px;margin:24px 0}
+.box p{margin:0}
+.calc{font-family:var(--mono);font-size:15px;background:var(--sheet);border:1px solid var(--rule);border-radius:8px;padding:14px 16px;overflow-x:auto;white-space:pre}
+.cta{margin-top:48px;background:var(--green);color:var(--on-green);border-radius:12px;padding:28px}
+.cta h2{margin:0 0 8px;color:var(--on-green)}
+.cta p{margin:0 0 18px;opacity:.9}
+.cta .btn{background:var(--paper);color:var(--ink)}
+.cards{display:grid;gap:16px;margin-top:28px}
+.card{display:block;background:var(--sheet);border:1px solid var(--rule);border-radius:10px;padding:22px;text-decoration:none;color:var(--ink)}
+.card:hover{border-color:var(--green)}
+.card h2{margin:6px 0 8px;font-size:23px}
+.card p{margin:0;color:var(--ink-2);font-size:17px}
+footer{border-top:1px solid var(--rule);padding-block:32px 48px;font-size:14px;color:var(--ink-2)}
+footer .wrap{max-width:1160px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 32px}
+footer nav{display:flex;flex-wrap:wrap;gap:8px 20px}
+footer a{color:var(--ink-2)}
+:focus-visible{outline:2px solid var(--green);outline-offset:3px}
+
+/* New branding (matches the homepage): serif headlines, 12px buttons */
+h1,h2{font-family:"Newsreader",Georgia,serif;font-weight:400;letter-spacing:-.02em}
+.btn{border-radius:12px}
+</style>
+<body>
+<header><div class="wrap"><a class="brand" href="/"><svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><rect width="26" height="26" rx="5" fill="var(--green)"/><path d="M7.5 8h11M13 8v11" fill="none" stroke="var(--on-green)" stroke-width="2.4" stroke-linejoin="round"/></svg> <span style="font-family:var(--body);font-weight:600;font-size:25px;letter-spacing:-.02em">tilo<span style="color:var(--green)">.</span></span></a><a class="btn" href="https://app.heytilo.ai/signup">Get your AI CFO</a></div></header>
+<main><div class="wrap">
+
+<p class="label">Guide · Borrowing</p>
+<h1>What is debt service coverage ratio (DSCR)?</h1>
+<p class="lede">It's the number a lender checks first: how many times your yearly earnings cover your yearly loan payments. Here's how to work it out, what ratio banks and the SBA look for, and a worked example you can copy with your own figures.</p>
+<p class="meta">Checked November 10, 2026</p>
+
+<h2>The short answer</h2>
+<p>Debt service coverage ratio, or DSCR, divides the cash your business earns in a year by the loan payments it owes in that year, principal and interest together.</p>
+<div class="calc">DSCR = Yearly earnings available for debt ÷ Yearly debt payments
+
+$150,000 ÷ $100,000 = 1.50x</div>
+<p>A ratio of 1.50x means you earn $1.50 for every $1.00 of loan payments. At 1.00x, as SoFi puts it, <a href="https://www.sofi.com/learn/content/debt-service-coverage-ratio/">the business's income is just enough to service its debt</a>, with nothing left over. Below 1.00x, you can't make the payments from earnings alone.</p>
+
+<h2>What goes on each side</h2>
+<h3>Earnings (the top number)</h3>
+<p>Most lenders start from EBITDA: earnings before interest, taxes, depreciation and amortization. You add interest back because it's part of the payments you're testing, and depreciation because it isn't cash going out. The SBA's rules for small 7(a) loans, as summarized by a law firm, <a href="https://starfieldsmith.com/2026/01/best-practices-sop-50-10-8-update-new-7a-small-loan-underwriting-requirements/">measure operating cash flow as EBITDA</a>, with allowed adjustments.</p>
+<p>Lenders then adjust it for <b>add-backs</b>: one-time costs that won't happen again, such as a legal settlement or a move. Every add-back needs a document behind it. A lender may throw out ones it can't check.</p>
+<p>Formulas differ. Some lenders use net operating income plus non-cash charges, and Bluevine notes that <a href="https://bluevine.com/blog/calculate-debt-service-coverage-ratio">different lenders may use slightly different formulas</a>. Ask yours which one it uses.</p>
+<h3>Debt payments (the bottom number)</h3>
+<p>A full year of required payments, principal and interest, on all business debt, including the new loan you're asking for. That means term loans, equipment and vehicle loans, and SBA loans. Some lenders also count equipment and property leases: SoFi's example adds <a href="https://www.sofi.com/learn/content/debt-service-coverage-ratio/">lease payments for property and equipment</a> to debt service.</p>
+
+<h2>What ratio do lenders want?</h2>
+<ul>
+<li><b>Banks: usually 1.25x.</b> SoFi says <a href="https://www.sofi.com/learn/content/debt-service-coverage-ratio/">most lenders prefer seeing ratios of at least 1.25</a>. Bluevine adds that a lender may ask for <a href="https://bluevine.com/blog/calculate-debt-service-coverage-ratio">1.35 or even 1.5</a> when the economy is tight.</li>
+<li><b>SBA 7(a) loans over $350,000, other than buying a business: 1.15x.</b> Under SBA's current rules (SOP 50 10 8.1), a consultant's summary quotes the requirement as <a href="https://businessplanfirm.com/sba-debt-service-coverage-requirements">1.15 on a historical and/or projected cash flow basis and 1:1 on a global basis</a>.</li>
+<li><b>SBA 7(a) small loans ($350,000 or less, other than buying a business): 1.10x.</b> Since March 1, 2026, coverage <a href="https://starfieldsmith.com/2026/01/best-practices-sop-50-10-8-update-new-7a-small-loan-underwriting-requirements/">must be equal to or greater than 1.1:1</a>, on historical or projected cash flow.</li>
+<li><b>SBA loans to buy a business: mostly 1.25x.</b> From October 1, 2026, SBA sets coverage by type of purchase: <a href="https://starfieldsmith.com/2026/09/best-practices-change-of-ownership-transactions-under-sop-50-10-8-1-what-sba-lenders-need-to-know/">1.25:1 for an initial acquisition, an owner buyout, or an ESOP or cooperative, and 1.15:1 for a business expansion</a>. It must be met on past earnings: <a href="https://starfieldsmith.com/2026/09/best-practices-change-of-ownership-transactions-under-sop-50-10-8-1-what-sba-lenders-need-to-know/">projections cannot be used</a>.</li>
+</ul>
+<p>These are minimums. The SBA lender can ask for more, so plan on 1.25x unless your lender tells you otherwise.</p>
+
+<h2>A worked example</h2>
+<p>The business is made up: a $2.4 million distributor that wants a $600,000 loan. All the figures are examples, so swap in your own.</p>
+<h3>Step 1: earnings</h3>
+<div class="calc">Net income                     $180,000
++ Interest                      $40,000
++ Depreciation                  $60,000
+EBITDA                         $280,000
++ One-time legal settlement     $20,000
+Adjusted EBITDA                $300,000</div>
+<p>This example business is taxed as a pass-through, so there's no company income tax to add back. If yours pays tax, add it back too.</p>
+<h3>Step 2: coverage today</h3>
+<div class="calc">Existing loan payments   $9,000 a month
+                       $108,000 a year
+
+DSCR = $300,000 ÷ $108,000 = 2.78x</div>
+<h3>Step 3: coverage with the new loan</h3>
+<p>The new loan is $600,000 over 10 years at an example 10% rate.</p>
+<div class="calc">New loan payment         $7,929 a month
+                        $95,149 a year
+All payments           $203,149 a year
+
+DSCR = $300,000 ÷ $203,149 = 1.48x</div>
+<p>1.48x clears a bank's 1.25x and the SBA's 1.15x. The <a href="/calculators/loan-payment.html">loan payment calculator</a> works out the payment for your own rate and term.</p>
+<h3>Step 4: the largest loan at 1.25x</h3>
+<div class="calc">Adjusted EBITDA ÷ 1.25      $240,000 a year
+− Existing payments        −$108,000 a year
+Room for new payments       $132,000 a year
+                             $11,000 a month
+
+At 10% over 10 years, that borrows about $832,383</div>
+<p>The <a href="/calculators/how-much-can-i-borrow.html">how much can I borrow calculator</a> runs these steps with your numbers.</p>
+<h3>Step 5: test a bad year</h3>
+<p>Lenders ask what happens if earnings fall. Here's the example with earnings down 25%:</p>
+<div class="calc">$300,000 × 75% = $225,000
+
+DSCR = $225,000 ÷ $203,149 = 1.11x</div>
+<p>That's below 1.25x and under the SBA's 1.15x. If your earnings swing from year to year, borrow less than the maximum, or make sure the business can ride out a slow stretch.</p>
+
+<h2>Global coverage: when your personal finances count</h2>
+<p>For a business with one or a few owners, lenders often look past the company. SoFi describes a global DSCR as <a href="https://www.sofi.com/learn/content/debt-service-coverage-ratio/">based on the owner's personal income and personal debts</a>. Lenders typically add your salary and other income, then subtract <a href="https://colemanreport.com/calculating-global-cash-flow-for-sba-7a-and-504-loans-under-the-new-sop-50-10-8-1-wed-dec-2/">personal debt obligations and living expenses</a>, and look at that alongside the business's numbers and any other companies you own. For standard SBA 7(a) loans, that global figure needs to be at least <a href="https://businessplanfirm.com/sba-debt-service-coverage-requirements">1:1</a>.</p>
+<p>So the money you take out of the business matters. If you pay yourself a lot, the business shows less, and your personal side has to carry its own debts.</p>
+
+<h2>How to raise your DSCR</h2>
+<ol>
+<li><b>Refinance short, expensive debt.</b> In the example, say $3,500 a month of the existing payments is a loan with three years left at 11% (about $106,907 owed). Spread over 10 years at an example 10%, the payment falls to about $1,413 a month. That frees about $25,047 a year and lifts coverage with the new loan from 1.48x to 1.68x. Check any prepayment penalty first.</li>
+<li><b>Document your add-backs.</b> One-time costs only count if you can prove them. Keep the invoices.</li>
+<li><b>Separate personal spending.</b> Personal costs run through the business lower your earnings. Lenders may add some back, but clean books are easier to trust.</li>
+<li><b>Borrow less, or put more down.</b> A smaller loan means a smaller payment.</li>
+<li><b>Fix the leaks before you apply.</b> Every dollar of cost you cut adds a dollar to earnings. Our guide on <a href="/guides/find-wasted-spending-quickbooks.html">finding wasted spending in QuickBooks®</a> is a good start.</li>
+<li><b>Plan for the slow months.</b> A yearly ratio can hide a tight quarter. The <a href="/#template">13-week cash flow template</a> shows whether the new payment still fits week by week.</li>
+</ol>
+
+<p>This guide is general information, not financial or legal advice. Lender and SBA rules change, so confirm the requirement with your lender.</p>
+
+<div class="cta"><h2>See your DSCR, from your books.</h2><p>Tilo reads your QuickBooks or Xero books, works out earnings with add-backs, shows your coverage before and after a new loan and the largest loan at 1.25x, and builds the package a lender asks for. 7-day free trial, then $799 a month.</p><a class="btn" href="https://app.heytilo.ai/signup">Get your AI CFO</a></div>
+
+<h2>Sources</h2>
+<p class="meta">All checked November 10, 2026. SBA's own SOP could not be opened for this check, so SBA rules are cited from law firm and consultant summaries. Confirm them with your lender.</p>
+<ul style="font-size:16px">
+<li><a href="https://starfieldsmith.com/2026/09/best-practices-change-of-ownership-transactions-under-sop-50-10-8-1-what-sba-lenders-need-to-know/">Starfield &amp; Smith: change of ownership under SOP 50 10 8.1 (law firm, September 9, 2026)</a></li>
+<li><a href="https://starfieldsmith.com/2026/01/best-practices-sop-50-10-8-update-new-7a-small-loan-underwriting-requirements/">Starfield &amp; Smith: new 7(a) small loan underwriting requirements (law firm, January 28, 2026)</a></li>
+<li><a href="https://businessplanfirm.com/sba-debt-service-coverage-requirements">Business Plan Firm: SBA debt service coverage requirements under SOP 50 10 8.1 (consultant, updated October 12, 2026)</a></li>
+<li><a href="https://www.doeren.com/viewpoint/sop-50-10-8-1-what-sba-lenders-should-be-thinking-about-before-oct-1">Doeren Mayhew: SOP 50 10 8.1, effective October 1, 2026 (accounting firm, August 24, 2026)</a></li>
+<li><a href="https://colemanreport.com/calculating-global-cash-flow-for-sba-7a-and-504-loans-under-the-new-sop-50-10-8-1-wed-dec-2/">Coleman Report: calculating global cash flow under SOP 50 10 8.1 (training outline, November 2026)</a></li>
+<li><a href="https://www.sofi.com/learn/content/debt-service-coverage-ratio/">SoFi: debt service coverage ratio definition, formula and examples (lender, April 2, 2026)</a></li>
+<li><a href="https://bluevine.com/blog/calculate-debt-service-coverage-ratio">Bluevine: how to calculate debt service coverage ratio (lender)</a></li>
+</ul>
+
+</div></main>
+<footer><div class="wrap"><span><b style="font-family:var(--display);color:var(--ink)">tilo<span style="color:var(--green)">.</span></b> · New York · <a href="mailto:hello@heytilo.ai">hello@heytilo.ai</a></span><nav aria-label="Footer"><a href="/">Home</a><a href="/guides/">Guides</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a></nav><p style="flex-basis:100%;margin:0;font-size:12.5px">QuickBooks is a registered trademark of Intuit Inc. Xero is a trademark of Xero Limited. Stripe is a trademark of Stripe, Inc. Tilo is not affiliated with or endorsed by Intuit, Xero or Stripe.</p></div></footer>
+</body>
+</html>
