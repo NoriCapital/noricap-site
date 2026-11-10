@@ -280,6 +280,15 @@ footer .disc{flex-basis:100%;font-size:13px;margin:0}
 .slide-dots .dot{width:10px;height:10px;border-radius:999px;border:0;padding:0;background:rgba(255,255,255,.5);cursor:pointer}.slide-dots .dot.on{background:#fff;width:22px}
 .slide-dots .dot-pause{border:0;background:none;color:#fff;font-size:10px;cursor:pointer;padding:2px 2px 2px 6px;min-height:24px}
 @media (prefers-reduced-motion:reduce){.hero-box .slide{transition:none}}
+.tilo-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.tilo-card{background:#fff;border-radius:20px;padding:28px;display:flex;flex-direction:column;gap:12px}
+.tilo-top{display:flex;align-items:baseline;gap:12px}
+.tilo-letter{font-family:var(--serif);font-weight:300;font-size:72px;line-height:.9}
+.tilo-name{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-2)}
+.tilo-card h3{margin:0;font-size:24px;line-height:1.15}
+.tilo-card p{margin:0;font-size:15.5px;line-height:1.55;color:var(--ink-2)}
+@media (max-width:1100px){.tilo-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:600px){.tilo-grid{grid-template-columns:minmax(0,1fr)}}
 </style>
 </head>
 <body>
@@ -314,14 +323,41 @@ footer .disc{flex-basis:100%;font-size:13px;margin:0}
   </div>
 
   <section id="services" aria-labelledby="svc-h" style="padding-top:96px">
-    <div class="wrap" style="display:flex;flex-direction:column;gap:16px;max-width:900px;margin-left:auto;margin-right:auto;text-align:center;align-items:center">
-      <p class="kicker">What we do</p>
-      <h2 id="svc-h">Get paid faster. Keep clean books. Grow with a CFO in your corner.</h2>
-      <p class="lead">Start with an agent that chases what you're owed, bookkeepers who keep your books current, or AI plus a CFO for every financial need, end to end. Every plan runs on Tilo, so you see your cash, your risks and your next move every day.</p>
-      <div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:8px">
-        <a class="pill-link" href="#agent">Collections agent</a>
-        <a class="pill-link" href="#bookkeeping">Bookkeeping</a>
-        <a class="pill-link" href="#scale">AI + CFO (Scale)</a><a class="pill-link" href="#platform">Just the software</a>
+    <div class="wrap" style="display:flex;flex-direction:column;gap:40px">
+      <div style="display:flex;flex-direction:column;gap:14px;max-width:900px;margin:0 auto;text-align:center;align-items:center">
+        <p class="kicker">What we do</p>
+        <h2 id="svc-h">Track it. Collect it. Forecast it. Fund it.</h2>
+      </div>
+      <div class="tilo-grid">
+        <article class="tilo-card">
+          <div class="tilo-top"><span class="tilo-letter" style="color:#259BC6" aria-hidden="true">T</span><span class="tilo-name">T — Track Progress</span></div>
+          <h3>Know where every dollar goes.</h3>
+          <p>No more messy books or month-end surprises. Tilo keeps your finances organized, tracks expenses, and catches money leaks before they become bigger problems. Know what's working, what's costing you, and where you can save.</p>
+        </article>
+        <article class="tilo-card">
+          <div class="tilo-top"><span class="tilo-letter" style="color:#FF740A" aria-hidden="true">I</span><span class="tilo-name">I — Invoices Collected</span></div>
+          <h3>Get paid faster. Chase less.</h3>
+          <p>Stop spending your time following up on unpaid invoices. Tilo sends reminders, follows up with customers, and helps bring your money in faster. You stay focused on your customers. Tilo handles the chasing.</p>
+        </article>
+        <article class="tilo-card">
+          <div class="tilo-top"><span class="tilo-letter" style="color:#259BC6" aria-hidden="true">L</span><span class="tilo-name">L — Look Ahead</span></div>
+          <h3>Know what's coming before it happens.</h3>
+          <p>Can you afford that new hire? Will you have enough cash for payroll? What if a customer pays late? Tilo looks at your numbers, forecasts your cash flow, and helps you plan your next move with confidence.</p>
+        </article>
+        <article class="tilo-card">
+          <div class="tilo-top"><span class="tilo-letter" style="color:#FF740A" aria-hidden="true">O</span><span class="tilo-name">O — Obtain Funding</span></div>
+          <h3>Get the capital to grow.</h3>
+          <p>Need money to expand, buy equipment, or manage cash flow? Tilo helps you understand your options, get your financials lender-ready, and find funding that fits your business.</p>
+        </article>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:12px;max-width:900px;margin:0 auto;text-align:center;align-items:center">
+        <p class="serif" style="margin:0;font-size:clamp(26px,3vw,36px);line-height:1.15">Less financial busywork. More business growth.</p>
+        <p class="lead" style="margin:0">One AI finance team. Four ways to move your business forward.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:8px">
+          <a class="pill-link" href="#agent">Collections agent</a>
+          <a class="pill-link" href="#bookkeeping">Bookkeeping</a>
+          <a class="pill-link" href="#scale">AI + CFO (Scale)</a><a class="pill-link" href="#platform">Just the software</a>
+        </div>
       </div>
     </div>
   </section>
