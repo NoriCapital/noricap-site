@@ -9,7 +9,7 @@ The public website for Tilo, the AI CFO for owner-led businesses, made by Tilo L
 - Contact email on the site is hello@heytilo.ai (an alias of pa@noricap.com in Google Workspace, set up November 9, 2026). Unchanged for now, on purpose: unboring.beehiiv.com links, file names such as `what-nori-does.html`, the GitHub repo names, and form field names (`unboring` opt-in).
 - No "Nori" or "Nori Cap" anywhere visitors look (Philip, November 9, 2026): footers read "tilo · New York · hello@heytilo.ai" and disclaimers say Tilo. Terms and Privacy name the company as Tilo LLC (switched from Nori Capital LLC on November 9, 2026; Philip says Tilo LLC is formed in Wyoming and final documents are pending). Stripe still shows Nori Capital LLC until Philip connects Tilo LLC's bank account.
 
-Philip and Pratibha both work on this repo, each with their own Claude sessions. Read this file first and follow it.
+Philip and Pratibha both work on this repo, each with their own Claude sessions. Read this file first and follow it. Before changing pricing, plans, brand, legal name, addresses or claims customers see, read `DECISIONS.md`; after such a change, add a dated line there (who decided, what changed) in both repos.
 
 ## Pushing to main publishes the site
 

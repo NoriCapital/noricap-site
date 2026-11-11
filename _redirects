@@ -27,5 +27,7 @@ http://www.noricap.com/*     https://heytilo.ai/:splat    301!
 /compare/fractional-cfo.html    /compare/#fractional-cfo    301
 /compare/fractional-cfo    /compare/#fractional-cfo    301
 /CLAUDE.md    /404.html    404!
+/DECISIONS.md    /404.html    404!
+/.claude/*    /404.html    404!
 /README.md    /404.html    404!
 /content/*    /404.html    404!
