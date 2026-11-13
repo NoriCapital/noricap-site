@@ -6,6 +6,7 @@ Business decisions that change what customers see or pay: pricing, plans, brand,
 
 | Date | Who | Decision | Where it shows |
 |---|---|---|---|
+| 2026-11-12 | Philip | Stripe moved to Tilo LLC: legal name TILO LLC with Tilo LLC's EIN, payouts to Tilo LLC's Chase account, card statements read HEYTILO.AI (short form TILO), support email hello@heytilo.ai, terms and privacy links on heytilo.ai | Stripe |
 | 2026-11-11 | Philip (security review, approved without review) | Sample company: Ask Tilo answers 10 questions a day per person; admins need a database flag as well as an admin email address | App |
 | 2026-11-11 | Philip | Keep this decisions log in both repos; both Claude sessions check it before pricing, brand or policy changes | DECISIONS.md, CLAUDE.md |
 | 2026-11-09 | Philip | App emails send as "Tilo"; sending address to move to no-reply@heytilo.ai once Resend verifies heytilo.ai (until then no-reply@noricap.com); replies go to hello@heytilo.ai | Render EMAIL_FROM, src/lib/mail.js |
