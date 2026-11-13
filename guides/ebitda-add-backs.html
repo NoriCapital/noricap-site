@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>How to Calculate EBITDA and Add-Backs for a Bank · Tilo</title>
+<meta name="description" content="How to work out EBITDA from your books, which add-backs banks accept, which they cut, and how adjusted EBITDA sets what you can borrow.">
+<meta property="og:title" content="How to Calculate EBITDA and Add-Backs for a Bank · Tilo">
+<meta property="og:description" content="How to work out EBITDA from your books, which add-backs banks accept, which they cut, and how adjusted EBITDA sets what you can borrow.">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://heytilo.ai/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://heytilo.ai/guides/ebitda-add-backs.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 26'%3E%3Crect width='26' height='26' rx='5' fill='%23120C08'/%3E%3Cpath d='M7.5 8h11M13 8v11' fill='none' stroke='%23F9F8F5' stroke-width='2.4' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0TMEK057R3"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-0TMEK057R3');</script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,300;6..72,400;6..72,500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap">
+<style>
+:root{--paper:#F9F8F5;--sheet:#FFFFFF;--rule:#E3DDCF;--ink:#120C08;--ink-2:#666666;--green:#120C08;--green-soft:#F3F0E9;--on-green:#FFFFFF;
+--display:"DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif;--body:"DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif;--mono:"DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif}
+*{box-sizing:border-box}
+:root{color-scheme:light}
+[hidden]{display:none!important}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:19px;line-height:1.65;-webkit-font-smoothing:antialiased}
+.wrap{max-width:760px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+header{border-bottom:1px solid var(--rule)}
+header .wrap{max-width:1160px;display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:14px}
+.brand{display:flex;align-items:center;gap:10px;font-family:var(--display);font-weight:800;font-size:22px;letter-spacing:-.03em;text-decoration:none;color:var(--ink)}
+.btn{display:inline-flex;font-family:var(--display);font-weight:700;font-size:15px;border-radius:6px;padding:11px 16px;text-decoration:none;background:var(--green);color:var(--on-green);white-space:nowrap}
+main{padding-block:56px 80px}
+.label{font-family:var(--mono);font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-2)}
+h1,h2,h3{font-family:var(--display);letter-spacing:-.02em;line-height:1.1;text-wrap:balance}
+h1{font-size:clamp(34px,5vw,52px);font-weight:800;margin:12px 0 18px}
+h2{font-size:26px;font-weight:800;margin:44px 0 10px}
+h3{font-size:20px;font-weight:700;margin:28px 0 6px}
+.lede{font-size:21px;color:var(--ink-2)}
+.meta{font-family:var(--mono);font-size:13px;color:var(--ink-2)}
+a{color:var(--green)}
+ul,ol{padding-left:22px}
+li{margin:6px 0}
+.box{background:var(--sheet);border:1px solid var(--rule);border-radius:10px;padding:18px 20px;margin:24px 0}
+.box p{margin:0}
+.calc{font-family:var(--mono);font-size:15px;background:var(--sheet);border:1px solid var(--rule);border-radius:8px;padding:14px 16px;overflow-x:auto;white-space:pre}
+.cta{margin-top:48px;background:var(--green);color:var(--on-green);border-radius:12px;padding:28px}
+.cta h2{margin:0 0 8px;color:var(--on-green)}
+.cta p{margin:0 0 18px;opacity:.9}
+.cta .btn{background:var(--paper);color:var(--ink)}
+.cards{display:grid;gap:16px;margin-top:28px}
+.card{display:block;background:var(--sheet);border:1px solid var(--rule);border-radius:10px;padding:22px;text-decoration:none;color:var(--ink)}
+.card:hover{border-color:var(--green)}
+.card h2{margin:6px 0 8px;font-size:23px}
+.card p{margin:0;color:var(--ink-2);font-size:17px}
+footer{border-top:1px solid var(--rule);padding-block:32px 48px;font-size:14px;color:var(--ink-2)}
+footer .wrap{max-width:1160px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 32px}
+footer nav{display:flex;flex-wrap:wrap;gap:8px 20px}
+footer a{color:var(--ink-2)}
+:focus-visible{outline:2px solid var(--green);outline-offset:3px}
+
+/* New branding (matches the homepage): serif headlines, 12px buttons */
+h1,h2{font-family:"Newsreader",Georgia,serif;font-weight:400;letter-spacing:-.02em}
+.btn{border-radius:12px}
+</style>
+<body>
+<header><div class="wrap"><a class="brand" href="/"><svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><rect width="26" height="26" rx="5" fill="var(--green)"/><path d="M7.5 8h11M13 8v11" fill="none" stroke="var(--on-green)" stroke-width="2.4" stroke-linejoin="round"/></svg> <span style="font-family:var(--body);font-weight:600;font-size:25px;letter-spacing:-.02em">tilo<span style="color:var(--green)">.</span></span></a><a class="btn" href="https://app.heytilo.ai/signup">Get your AI CFO</a></div></header>
+<main><div class="wrap">
+
+<p class="label">Guide · Borrowing</p>
+<h1>How to calculate EBITDA and add-backs for a bank</h1>
+<p class="lede">Before a bank decides how much to lend, it works out what your business really earns in cash. That number is usually adjusted EBITDA. Here's how to calculate it from your books, which add-backs hold up, and which ones a lender will cross out.</p>
+<p class="meta">Checked November 13, 2026</p>
+
+<h2>The short answer</h2>
+<ol>
+<li><b>Start with net income</b> for the last 12 months or the last tax year.</li>
+<li><b>Add back interest, income taxes, depreciation and amortization.</b> That gives you EBITDA.</li>
+<li><b>Add back costs that won't continue</b>: one-time expenses and personal costs run through the business, each with a document behind it.</li>
+<li><b>Adjust owner pay to market.</b> Add back what you pay yourself above what a replacement manager would cost. Subtract it if you're paid below market or someone works for free.</li>
+<li>The result is <b>adjusted EBITDA</b>. The bank divides it by your yearly loan payments to test coverage.</li>
+</ol>
+
+<h2>Why banks start from EBITDA</h2>
+<p>EBITDA stands for earnings before interest, taxes, depreciation and amortization. Lenders use it as a rough measure of the cash the business produces before paying its debts:</p>
+<ul>
+<li><b>Interest</b> goes back in because the bank is testing whether earnings cover loan payments. Counting interest twice would understate what you can pay.</li>
+<li><b>Depreciation and amortization</b> go back in because they're accounting charges, not cash leaving the bank account this year.</li>
+<li><b>Income taxes</b> go back in to get a figure before tax. Many lenders then deal with taxes separately (see below).</li>
+</ul>
+<p>SBA uses the same starting point. A law firm's summary of SBA's rules for small 7(a) loans says <a href="https://starfieldsmith.com/2026/01/best-practices-sop-50-10-8-update-new-7a-small-loan-underwriting-requirements/">operating cash flow is defined as EBITDA</a>, and that lenders may make additions and subtractions to it under SBA's rules.</p>
+<p>The formula from your profit and loss statement:</p>
+<div class="calc">EBITDA = net income
+       + interest expense
+       + income taxes
+       + depreciation
+       + amortization</div>
+<p>If your P&amp;L shows operating income instead, you can start there: the Corporate Finance Institute gives it as <a href="https://corporatefinanceinstitute.com/resources/valuation/ebitda-margin/">operating income (EBIT) + depreciation + amortization</a>.</p>
+
+<h2>What add-backs are</h2>
+<p>Add-backs are costs in your books that a new lender, or a new owner, wouldn't expect to continue. Adding them back shows what the business earns in a normal year. One SBA advisory firm puts it as <a href="https://www.pioneercapitaladvisory.com/post/ebitda-normalization-explained-how-buyers-find-the-true-earnings">EBITDA + approved add-backs – required adjustments</a>. The word "approved" matters: the lender decides what counts, not you.</p>
+
+<h3>Add-backs that usually hold up</h3>
+<ul>
+<li><b>True one-time costs.</b> A lawsuit settlement, legal fees for a specific dispute, storm damage repairs, a one-off consulting project, or the cost of a move. A CPA writing about SBA deals says these are accepted <a href="https://acquidex.com/blog/how-to-analyze-add-backs-what-sba-lenders-actually-accept">only with documentation</a>, such as invoices or a settlement agreement.</li>
+<li><b>Personal costs paid by the business.</b> A family phone plan, a personal vehicle, or personal travel. Pioneer lists these as common, and says lenders often accept <a href="https://www.pioneercapitaladvisory.com/post/ebitda-normalization-explained-how-buyers-find-the-true-earnings">clearly personal expenses with documentation</a>.</li>
+<li><b>Owner pay above market.</b> If you pay yourself $160,000 and a hired general manager would cost $120,000, the $40,000 difference can be added back. The full amount you take out never is: the same CPA notes <a href="https://acquidex.com/blog/how-to-analyze-add-backs-what-sba-lenders-actually-accept">the full owner draw is never the add-back</a>.</li>
+</ul>
+
+<h3>Adjustments that go the other way</h3>
+<ul>
+<li><b>Owner pay below market.</b> If you pay yourself little or nothing, a lender may cut EBITDA by what a replacement would cost. Pioneer notes underpaid owners <a href="https://www.pioneercapitaladvisory.com/post/ebitda-normalization-explained-how-buyers-find-the-true-earnings">can lead lenders to reduce EBITDA</a>.</li>
+<li><b>Unpaid family help.</b> A spouse who keeps the books for free is a cost the business would have to pay for if they stopped.</li>
+<li><b>Rent below market</b> on a building you own personally is a similar case. Ask your lender whether it adjusts for it.</li>
+</ul>
+
+<h3>Add-backs lenders cross out</h3>
+<ul>
+<li><b>"One-time" costs that happen every year.</b> If you had a big repair bill last year and the year before, it's a normal cost of running the business. An accounting firm that prepares quality of earnings reports flags add-backs that <a href="https://www.doeren.com/viewpoint/sba-quality-of-earnings-reports-what-lenders-need-to-know-about-sop-50-10-8-1">are not truly nonrecurring</a>.</li>
+<li><b>Vague or undocumented items.</b> "Miscellaneous" and undocumented consulting or professional fees are on Pioneer's list of what lenders <a href="https://www.pioneercapitaladvisory.com/post/ebitda-normalization-explained-how-buyers-find-the-true-earnings">often reject</a>.</li>
+<li><b>Owner costs that will continue.</b> If the expense keeps going after the loan, or after a sale, it isn't an add-back.</li>
+<li><b>Numbers that don't match the tax return.</b> Lenders, the CPA says, start <a href="https://acquidex.com/blog/how-to-analyze-add-backs-what-sba-lenders-actually-accept">from the federal tax return</a>. If your books and return differ, explain why.</li>
+</ul>
+
+<h2>Worked example</h2>
+<p>The business and figures are made up. A specialty contractor's last 12 months:</p>
+<div class="calc">Net income                       $180,000
++ Interest expense                $22,000
++ Income taxes                     $6,000
++ Depreciation                    $64,000
+EBITDA                           $272,000
+
+Add-backs
++ Lawsuit settlement (one-time)   $18,000   settlement letter
++ Owner's personal vehicle         $9,500   lease and log
++ Owner pay above market          $40,000   $160,000 paid,
+                                            $120,000 market
+Adjustments
+− Spouse keeps books unpaid      −$30,000   cost to replace
+
+Adjusted EBITDA                  $309,500
+
+Not counted
+  "Consulting" with no invoice    $12,000</div>
+<p>Now the bank compares that with a year of loan payments. Say the business already pays $120,000 a year on its debts:</p>
+<div class="calc">Coverage today
+$309,500 ÷ $120,000             = 2.58x
+
+Most a bank looking for 1.25x would allow
+$309,500 ÷ 1.25                 = $247,600 a year
+Less existing payments          − $120,000
+Room for new payments           = $127,600 a year
+
+Without add-backs ($272,000)
+$272,000 ÷ 1.25 − $120,000      = $97,600 a year</div>
+<p>The documented add-backs are worth about $30,000 a year of extra loan payments in this example. The undocumented $12,000 would have added more, but a lender would cross it out, so it's left out from the start. Our <a href="/guides/debt-service-coverage-ratio.html">DSCR guide</a> explains the coverage test and the minimums lenders use, and the <a href="/calculators/how-much-can-i-borrow.html">how much can I borrow calculator</a> turns yearly payment room into a loan amount.</p>
+
+<h2>Taxes and owner distributions</h2>
+<p>If your business is an S corporation, partnership or LLC, it usually doesn't pay income tax itself; you pay it personally on the profit. So EBITDA can look high while the owners still need cash for taxes and living costs. SBA lenders often look at <b>global cash flow</b>: the business and the owners together. Training for SBA lenders covers adjustments for <a href="https://colemanreport.com/calculating-global-cash-flow-for-sba-7a-and-504-loans-under-the-new-sop-50-10-8-1-wed-dec-2/">owner compensation, distributions, S-Corporation taxes, rent and nonrecurring expenses</a>. Ask your lender how it handles them, and don't assume all of EBITDA is available for loan payments.</p>
+
+<h2>What EBITDA leaves out</h2>
+<p>EBITDA is a starting point, not cash in the bank. CFI notes that it <a href="https://corporatefinanceinstitute.com/resources/valuation/ebitda-margin/">ignores changes in working capital</a> and doesn't count spending on equipment. A trucking or construction business that must replace trucks and machines every year has less spare cash than its EBITDA suggests. Growing businesses also tie up cash in receivables and inventory. A <a href="/#template">13-week cash flow forecast</a> shows whether the cash will actually be there each week once the new payment starts.</p>
+
+<h2>If you're buying a business</h2>
+<p>Add-backs get the most scrutiny in acquisitions, because the seller's adjusted EBITDA sets the price and the loan. Under SBA's rules for loans approved from October 1, 2026, a law firm reports a quality of earnings report is required for business purchases when the price, <a href="https://starfieldsmith.com/2026/09/best-practices-change-of-ownership-transactions-under-sop-50-10-8-1-what-sba-lenders-need-to-know/">excluding owner-occupied real estate, is $3,000,000 or more</a>, and that projections can't be used to meet the coverage test. Doeren Mayhew adds that the report must be commissioned for the lender; <a href="https://www.doeren.com/viewpoint/sba-quality-of-earnings-reports-what-lenders-need-to-know-about-sop-50-10-8-1">a QoE prepared for the buyer or seller</a> doesn't replace it. It reviews owner compensation, proposed add-backs and differences between the financial statements and tax returns.</p>
+
+<h2>How to prepare your add-backs</h2>
+<ol>
+<li>Use the same period as the lender: the last tax year, and the last 12 months if your statements are more recent.</li>
+<li>Check that net income in your books matches the tax return, or write down why it doesn't.</li>
+<li>List each add-back on its own line with the amount, the account it sits in, and one sentence on why it won't recur.</li>
+<li>Attach proof: invoices, settlement letters, a vehicle lease, payroll records.</li>
+<li>For owner pay, note what a replacement manager would cost and where that figure came from.</li>
+<li>Be the first to subtract what a lender would subtract. A short, honest list is more believable than a long one.</li>
+</ol>
+
+<p>This guide is general information, not financial, tax or legal advice. Every lender sets its own rules on which adjustments it accepts, so confirm with yours.</p>
+
+<div class="cta"><h2>Adjusted EBITDA, straight from your books.</h2><p>Tilo reads your QuickBooks or Xero books and finds interest, depreciation and income taxes over the last 12 months to work out EBITDA. You add your add-backs with a note on each, and Tilo shows adjusted EBITDA, your coverage before and after a new loan, and puts it all in a lender package in Excel. 7-day free trial, then $799 a month.</p><a class="btn" href="https://app.heytilo.ai/signup">Get your AI CFO</a></div>
+
+<h2>Sources</h2>
+<p class="meta">All checked November 13, 2026. SBA's own SOP could not be opened for this check, so SBA rules are cited from law firm and accounting firm summaries. Add-back practice varies by lender; the advisory and CPA sources below describe common practice, not rules.</p>
+<ul style="font-size:16px">
+<li><a href="https://starfieldsmith.com/2026/01/best-practices-sop-50-10-8-update-new-7a-small-loan-underwriting-requirements/">Starfield &amp; Smith: new 7(a) small loan underwriting requirements (law firm, January 28, 2026)</a></li>
+<li><a href="https://starfieldsmith.com/2026/09/best-practices-change-of-ownership-transactions-under-sop-50-10-8-1-what-sba-lenders-need-to-know/">Starfield &amp; Smith: change of ownership under SOP 50 10 8.1 (law firm, September 9, 2026)</a></li>
+<li><a href="https://www.doeren.com/viewpoint/sba-quality-of-earnings-reports-what-lenders-need-to-know-about-sop-50-10-8-1">Doeren Mayhew: SBA quality of earnings reports under SOP 50 10 8.1 (accounting firm, August 26, 2026)</a></li>
+<li><a href="https://corporatefinanceinstitute.com/resources/valuation/ebitda-margin/">Corporate Finance Institute: EBITDA margin (updated October 22, 2026)</a></li>
+<li><a href="https://www.pioneercapitaladvisory.com/post/ebitda-normalization-explained-how-buyers-find-the-true-earnings">Pioneer Capital Advisory: EBITDA normalization explained (SBA advisory firm, December 30, 2025)</a></li>
+<li><a href="https://acquidex.com/blog/how-to-analyze-add-backs-what-sba-lenders-actually-accept">Acquidex: how to analyze add-backs, what SBA lenders accept (CPA, April 9, 2026)</a></li>
+<li><a href="https://colemanreport.com/calculating-global-cash-flow-for-sba-7a-and-504-loans-under-the-new-sop-50-10-8-1-wed-dec-2/">Coleman Report: calculating global cash flow under SOP 50 10 8.1 (lender training outline, November 2026)</a></li>
+</ul>
+
+</div></main>
+<footer><div class="wrap"><span><b style="font-family:var(--display);color:var(--ink)">tilo<span style="color:var(--green)">.</span></b> · New York · <a href="mailto:hello@heytilo.ai">hello@heytilo.ai</a></span><nav aria-label="Footer"><a href="/">Home</a><a href="/guides/">Guides</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a></nav><p style="flex-basis:100%;margin:0;font-size:12.5px">QuickBooks is a registered trademark of Intuit Inc. Xero is a trademark of Xero Limited. Stripe is a trademark of Stripe, Inc. Tilo is not affiliated with or endorsed by Intuit, Xero or Stripe.</p></div></footer>
+</body>
+</html>

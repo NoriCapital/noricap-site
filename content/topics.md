@@ -12,7 +12,7 @@ can reorder, add or strike topics any time.
 - [x] What is debt service coverage ratio (DSCR), with a worked example for a small business (2026-11-10, https://heytilo.ai/guides/debt-service-coverage-ratio.html)
 - [x] SBA 7(a) vs SBA 504 loans: which one fits what you're buying (2026-11-11, https://heytilo.ai/guides/sba-7a-vs-504.html)
 - [x] What banks ask for in a small business loan application (checklist) (2026-11-12, https://heytilo.ai/guides/small-business-loan-application-checklist.html)
-- [ ] How to calculate EBITDA and add-backs for a bank
+- [x] How to calculate EBITDA and add-backs for a bank (2026-11-13, https://heytilo.ai/guides/ebitda-add-backs.html)
 - [ ] Line of credit vs term loan: when each makes sense
 - [ ] Revenue-based financing and merchant cash advances: true cost and when to avoid them
 - [ ] Equipment financing: how lenders size it and what it really costs
