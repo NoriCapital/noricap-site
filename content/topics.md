@@ -5,15 +5,64 @@ with the date and URL. Add new topics at the end of the list they belong to. Phi
 can reorder, add or strike topics any time.
 
 ## Funding: where to get money, and which programs (priority: Philip, November 14, 2026)
-Work through this section first. Each guide should say who offers the money, who qualifies,
-typical amounts, rates or fees, how long it takes, and how to apply, with current sources.
+Work through this section first, top to bottom. Goal: a library of funding guides at the federal,
+state and local level. Each guide says who offers the money, who qualifies, typical amounts, rates
+or fees, how long it takes, and how to apply, with current sources.
+State and local pages: cite the program's own official page (state agency, city or county, SBA,
+Treasury) for every amount, rate and rule; say when it was checked; say programs change and funds
+run out, so confirm before applying. Never list a program you couldn't find an official current
+page for. If a state or city has too little to fill a real guide, tick it "skipped: <reason>".
+
+### Overview (start here)
 - [ ] Where to get funding for a small business: every option compared (banks, SBA, CDFIs, credit unions, online lenders, factoring, equipment finance, grants)
 - [ ] SBA loan programs explained: 7(a), 7(a) small loans, Express, 504, Microloan and CAPLines
+- [ ] State small business loan programs (SSBCI): what states offer and how to find yours
+- [ ] Local small business loans: city and county loan funds, economic development groups and how to find them
+
+### Federal
 - [ ] SBA Express loans: limits, speed and who should use them
 - [ ] SBA Microloans: who offers them and how to apply
 - [ ] SBA CAPLines: working capital lines for contractors and seasonal businesses
+- [ ] How to find an SBA lender (Lender Match and preferred lenders)
+- [ ] SBA loans to buy a business: the 1.25x coverage rule from October 2026
 - [ ] CDFI loans: what they are and how to find one near you
-- [ ] State small business loan programs (SSBCI): what your state offers
+- [ ] USDA Business & Industry loans for rural businesses
+- [ ] Export financing: SBA export loans and EXIM working capital
+- [ ] SBIR and STTR: federal R&D funding for small businesses
+- [ ] Small business grants that actually exist (federal, state, local) and how to avoid grant scams
+- [ ] SBA disaster loans (EIDL): when they're available and how to apply
+
+### State (one guide per state: state loan programs, SSBCI, state-backed lenders and grants)
+- [ ] Small business loans in California: state programs (IBank and others)
+- [ ] Small business loans in Texas: state programs
+- [ ] Small business loans in Florida: state programs
+- [ ] Small business loans in New York: state programs
+- [ ] Small business loans in Illinois: state programs
+- [ ] Small business loans in Pennsylvania: state programs
+- [ ] Small business loans in Ohio: state programs
+- [ ] Small business loans in Georgia: state programs
+- [ ] Small business loans in North Carolina: state programs
+- [ ] Small business loans in Michigan: state programs
+- [ ] Small business loans in New Jersey: state programs
+- [ ] Small business loans in Tennessee: state programs
+- [ ] Small business loans in Washington: state programs
+- [ ] Small business loans in Virginia: state programs
+- [ ] Small business loans in Arizona: state programs
+- [ ] Small business loans in Massachusetts: state programs
+- [ ] Small business loans in Colorado: state programs
+
+### Local (one guide per city: city, county and local nonprofit loan funds)
+- [ ] Small business loans in New York City
+- [ ] Small business loans in Los Angeles
+- [ ] Small business loans in Chicago
+- [ ] Small business loans in Houston
+- [ ] Small business loans in Phoenix
+- [ ] Small business loans in Philadelphia
+- [ ] Small business loans in San Antonio and Dallas
+- [ ] Small business loans in Atlanta
+- [ ] Small business loans in Nashville
+
+### Private and other sources
 - [ ] Credit union business loans vs bank loans
 - [ ] Online business lenders: what they charge and when they make sense
 - [ ] Line of credit vs term loan: when each makes sense
@@ -21,13 +70,7 @@ typical amounts, rates or fees, how long it takes, and how to apply, with curren
 - [ ] Purchase order financing: how it works and what it costs
 - [ ] Equipment financing: how lenders size it and what it really costs
 - [ ] Revenue-based financing and merchant cash advances: true cost and when to avoid them
-- [ ] SBA loans to buy a business: the 1.25x coverage rule from October 2026
-- [ ] USDA Business & Industry loans for rural businesses
-- [ ] Export financing: SBA export loans and EXIM working capital
-- [ ] Small business grants that actually exist (federal, state, local) and how to avoid grant scams
-- [ ] SBIR and STTR: federal R&D funding for small businesses
 - [ ] How to read a loan offer: APR, fees, prepayment penalties and covenants
-- [ ] How to find an SBA lender (Lender Match and preferred lenders)
 
 ## Borrowing and lenders
 - [x] How much can a construction company borrow? (coverage, equipment loans, lines of credit) (2026-11-04, https://heytilo.ai/guides/construction-company-borrowing.html)
