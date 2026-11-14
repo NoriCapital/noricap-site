@@ -609,7 +609,7 @@ footer .disc{flex-basis:100%;font-size:13px;margin:0}
         <p class="kicker">Free newsletter · Tilo</p>
         <h2>Find money for your business in 5 minutes, twice a week.</h2>
         <p class="lead">Loans, credit, grants, tax incentives, contracts and investors worth knowing about, explained without the jargon. Free, every Tuesday and Thursday.</p>
-        <div class="hero-cta"><a class="btn" id="nl-sub" href="https://unboring.beehiiv.com/subscribe?utm_source=heytilo.ai&amp;utm_medium=newsletter-section&amp;utm_campaign=home">Subscribe for free →</a><a id="nl-sample" href="https://unboring.beehiiv.com/p/porta-potties-6-diesel-and-your-nov-2-payroll-deadline">Read a sample issue</a></div>
+        <div class="hero-cta"><a class="btn" id="nl-sub" href="https://news.heytilo.ai/subscribe?utm_source=heytilo.ai&amp;utm_medium=newsletter-section&amp;utm_campaign=home">Subscribe for free →</a><a id="nl-sample" href="https://news.heytilo.ai/p/porta-potties-6-diesel-and-your-nov-2-payroll-deadline">Read a sample issue</a></div>
         <p class="note" style="margin:0">Free to read. Unsubscribe anytime. You'll enter your email once, on Tilo's page.</p>
       </div>
       <div class="card box">
@@ -617,11 +617,11 @@ footer .disc{flex-basis:100%;font-size:13px;margin:0}
         <ul><li><b style="color:var(--ink);font-weight:500">The Capital Radar.</b> Who's lending and investing now, with amounts, terms and who qualifies.</li><li><b style="color:var(--ink);font-weight:500">The Grant Watch.</b> Programs with award sizes, eligibility and deadlines.</li><li><b style="color:var(--ink);font-weight:500">The Credit Playbook.</b> When a business card or credit line helps, and when it costs you.</li><li><b style="color:var(--ink);font-weight:500">The Money Move.</b> One practical lesson, from cash flow to lender-ready financials.</li></ul>
         <p class="k" style="margin-top:8px">Latest issues</p>
         <ol id="nl-issues">
-          <li><a href="https://unboring.beehiiv.com/p/porta-potties-6-diesel-and-your-nov-2-payroll-deadline"><span class="d">Nov 2, 2026</span>Porta potties, $6 diesel, and a payroll deadline today</a></li>
-          <li><a href="https://unboring.beehiiv.com/p/qbi-deduction-permanent-2026"><span class="d">Oct 23, 2026</span>The 20% QBI Deduction Is Now Permanent: What Changes in 2026</a></li>
-          <li><a href="https://unboring.beehiiv.com/p/rd-tax-credit-payroll-offset-2026"><span class="d">Oct 23, 2026</span>The R&amp;D Tax Credit in 2026: Up to $500,000 a Year, Even Without Profits</a></li>
+          <li><a href="https://news.heytilo.ai/p/porta-potties-6-diesel-and-your-nov-2-payroll-deadline"><span class="d">Nov 2, 2026</span>Porta potties, $6 diesel, and a payroll deadline today</a></li>
+          <li><a href="https://news.heytilo.ai/p/qbi-deduction-permanent-2026"><span class="d">Oct 23, 2026</span>The 20% QBI Deduction Is Now Permanent: What Changes in 2026</a></li>
+          <li><a href="https://news.heytilo.ai/p/rd-tax-credit-payroll-offset-2026"><span class="d">Oct 23, 2026</span>The R&amp;D Tax Credit in 2026: Up to $500,000 a Year, Even Without Profits</a></li>
         </ol>
-        <a href="https://unboring.beehiiv.com/">All issues →</a>
+        <a href="https://news.heytilo.ai/">All issues →</a>
       </div>
     </div>
   </section>
@@ -751,7 +751,7 @@ footer .disc{flex-basis:100%;font-size:13px;margin:0}
   <div class="wrap">
     <div class="about"><span class="serif" style="font-size:26px;color:var(--ink)">tilo</span><span>New York · <a href="mailto:hello@heytilo.ai">hello@heytilo.ai</a></span></div>
     <div class="col"><b>Product</b><a href="/what-nori-does.html#how">How it works</a><a href="/what-nori-does.html">What Tilo does</a><a href="/pricing.html">Pricing</a><a href="/calculators/">Calculators</a><a href="/compare/">Compare</a><a href="/guides/">Guides</a><a href="/for-accountants.html">For accountants</a></div>
-    <div class="col"><b>Company</b><a href="https://unboring.beehiiv.com/">Tilo newsletter</a><a href="mailto:hello@heytilo.ai">Contact</a></div>
+    <div class="col"><b>Company</b><a href="https://news.heytilo.ai/">Tilo newsletter</a><a href="mailto:hello@heytilo.ai">Contact</a></div>
     <div class="col"><b>Legal</b><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a></div>
     <p class="disc">Tilo provides operating analysis, not tax, legal or investment advice.</p>
     <p class="disc">QuickBooks is a registered trademark of Intuit Inc. Xero is a trademark of Xero Limited. Stripe is a trademark of Stripe, Inc. Tilo is not affiliated with or endorsed by Intuit, Xero or Stripe.</p>
@@ -807,7 +807,7 @@ footer .disc{flex-basis:100%;font-size:13px;margin:0}
   document.querySelectorAll('input[name=source]').forEach(function(i){ i.value=src; });
 
   // Tilo opt-in on the template form (Beehiiv). Falls back to Beehiiv's own page.
-  var FALLBACK='https://unboring.beehiiv.com/subscribe';
+  var FALLBACK='https://news.heytilo.ai/subscribe';
   function subscribe(email, source){
     return fetch('/.netlify/functions/subscribe',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:email,source:source,elapsed:Date.now()-T0})})
       .then(function(r){ return r.ok; }).catch(function(){ return false; });
