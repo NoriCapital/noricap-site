@@ -6,6 +6,7 @@ Business decisions that change what customers see or pay: pricing, plans, brand,
 
 | Date | Who | Decision | Where it shows |
 |---|---|---|---|
+| 2026-11-14 | Philip | Newsletter: daily-issue scheduled task now tags each draft Federal, State or Local so it shows on the homepage. "Revenue-Based Financing" and "Six Places to Find Capital" hidden from feeds (links still work). Two more web-only guides: state training grants (State) and façade grants (Local) | Newsletter |
 | 2026-11-14 | Philip | news.heytilo.ai guides organized by level: homepage shows Federal (SBA, SBIR and federal tax guides, kept because tax savings free up cash), State and Local feeds, each filtered by tag. Porta potties issue hidden from feeds (still at its URL). Four new web-only guides published: SSBCI and STEP grants (State), SBA microloans and revolving loan funds (Local) | Newsletter site |
 | 2026-11-14 | Philip | Tilo newsletter is daily (every weekday), no longer Tuesday and Thursday. Site, app sign-up opt-in, Beehiiv description and pages updated; issue-draft scheduled task now runs Sun–Thu | Newsletter, heytilo.ai, app sign-up |
 | 2026-11-14 | Philip | news.heytilo.ai redesigned for an institutional look: ink/cream/stone palette, light Newsreader headlines, black buttons (orange only as accent), branded typographic covers for every guide (img/news/ on heytilo.ai), no photos on Home or About, menu is Funding guides / How it works / About (cash template moved to the footer) | Newsletter site |
