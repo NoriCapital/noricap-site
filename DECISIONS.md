@@ -6,6 +6,7 @@ Business decisions that change what customers see or pay: pricing, plans, brand,
 
 | Date | Who | Decision | Where it shows |
 |---|---|---|---|
+| 2026-11-14 | Philip | Newsletter emails to send from tilo@mail.heytilo.ai (7 Beehiiv CNAME records under mail.heytilo.ai at Squarespace; Google email records untouched). Resend and Render workspaces and profiles renamed Tilo with the Tilo logo | Newsletter, Resend, Render |
 | 2026-11-14 | Philip | Newsletter moved to news.heytilo.ai (not "weekly"); unboring.beehiiv.com forwards. Beehiiv share image, page titles and profile say Tilo; Unboring social links removed. Stripe and Netlify logos, names and colors switched to Tilo; old Stripe products renamed Tilo | Newsletter, Stripe, Netlify, site links |
 | 2026-11-12 | Philip | Email confirmation switched off: people sign up and use Tilo without confirming their email (built and kept behind EMAIL_CONFIRM; revisit if fake sign-ups or misused invitations become a problem) | App sign-up |
 | 2026-11-12 | Philip | New accounts confirm their email address before starting the trial or joining a team (closes the invitation-capture gap from the security review); app emails now come from no-reply@heytilo.ai | App sign-up, emails |
