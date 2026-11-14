@@ -60,6 +60,14 @@ footer a{color:var(--ink-2)}
 /* New branding (matches the homepage): serif headlines, 12px buttons */
 h1,h2{font-family:"Newsreader",Georgia,serif;font-weight:400;letter-spacing:-.02em}
 .btn{border-radius:12px}
+.news{margin-top:24px;background:var(--sheet);border:1px solid var(--rule);border-radius:12px;padding:24px clamp(18px,3vw,28px);display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:18px;align-items:center}
+@media (max-width:760px){.news{grid-template-columns:1fr}}
+.news .eyebrow{margin:0;font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2)}
+.news h3{margin:4px 0 6px;font-size:22px;line-height:1.25}
+.news p{margin:0;color:var(--ink-2)}
+.news-go{display:flex;gap:12px 18px;flex-wrap:wrap;align-items:center}
+.news .sample{font-family:var(--display);font-weight:700;font-size:15px}
+.news .fine{flex-basis:100%;font-family:var(--display);font-size:13px}
 </style>
 <body>
 <header><div class="wrap"><a class="brand" href="/"><svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><rect width="26" height="26" rx="5" fill="var(--green)"/><path d="M7.5 8h11M13 8v11" fill="none" stroke="var(--on-green)" stroke-width="2.4" stroke-linejoin="round"/></svg> <span style="font-family:var(--body);font-weight:600;font-size:25px;letter-spacing:-.02em">tilo<span style="color:var(--green)">.</span></span></a><a class="btn" href="https://app.heytilo.ai/signup">Get your AI CFO</a></div></header>
@@ -163,6 +171,14 @@ Total                      $1,500,000</div>
 <p>This guide is general information, not financial or legal advice. SBA rules change, and lenders and CDCs can ask for more than SBA's minimums, so confirm the details with your lender.</p>
 
 <div class="cta"><h2>Know what you can borrow before you call a lender.</h2><p>Tilo reads your QuickBooks or Xero books, works out earnings with add-backs, shows your coverage before and after a new loan and the largest loan at 1.25x, and builds the package a lender asks for. 7-day free trial, then $799 a month.</p><a class="btn" href="https://app.heytilo.ai/signup">Get your AI CFO</a></div>
+<section class="news" aria-label="Tilo newsletter">
+  <div><p class="eyebrow">Free newsletter · Tilo</p><h3>Grants and funding for your business, every weekday.</h3><p>Federal, state and local programs worth applying for, explained in plain English in about five minutes.</p></div>
+  <div class="news-go">
+    <a class="btn" href="https://news.heytilo.ai/subscribe?utm_source=heytilo.ai&amp;utm_medium=guide-sba-7a-vs-504&amp;utm_campaign=site">Subscribe for free →</a>
+    <a class="sample" href="https://news.heytilo.ai/">Read the guides</a>
+    <p class="fine">Free to read. Unsubscribe anytime.</p>
+  </div>
+</section>
 
 <h2>Sources</h2>
 <p class="meta">All checked November 11, 2026. SBA's 504 and 7(a) program pages and the federal regulations could not be opened for this check, so most 504 rules are cited from CDC, broker and legal-information summaries. Confirm them with your lender or CDC.</p>
