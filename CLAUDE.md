@@ -41,6 +41,7 @@ Philip and Pratibha both work on this repo, each with their own Claude sessions.
 - Newsletter sign-ups on heytilo.ai are a "Subscribe for free" button to `https://news.heytilo.ai/subscribe` (with `utm_source=heytilo.ai` and `utm_medium=<where>`), so every reader goes through Tilo's own sign-up flow (survey, then recommended newsletters, which is how the newsletter earns). Don't add email fields that subscribe through the API, except the template form's opt-in.
 - `netlify/functions/subscribe.mjs` is now only for the template form's Tilo opt-in (welcome email `template-optin`). `netlify/functions/issues.mjs` serves the latest Tilo issues to the homepage (cached an hour); the HTML keeps a fallback list.
 - Bot protection on every form: anything sent within 3 seconds of the page loading, or with the hidden `bot-field` / `website` field filled, gets a normal-looking thank-you but nothing is sent. The newsletter function also drops sign-ups whose `elapsed` is missing or under 3,000 ms. Keep `elapsed` in any new call to it.
+- Newsletter covers: `node tools/news-cover/make-cover.js <slug> <Federal|State|Local> "<big>" "<line>" [stone|peach|ink]` writes `img/news/<slug>.jpg` (needs Playwright). Once pushed, it is the Beehiiv thumbnail at `https://heytilo.ai/img/news/<slug>.jpg`. The newsletter drafting task uses it each weekday. `tools/` is blocked from the public site in `_redirects`.
 - `_redirects` holds short URLs and old addresses; `sitemap.xml` lists every public page. Update both when you add, rename or remove a page.
 
 ## Facts on the site must be true
