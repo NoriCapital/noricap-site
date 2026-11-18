@@ -100,7 +100,7 @@ page for. If a state or city has too little to fill a real guide, tick it "skipp
 - [ ] How to spot supplier price increases in QuickBooks
 - [ ] How to find duplicate payments in QuickBooks or Xero
 - [ ] Customer concentration: when one customer is too big a share of revenue
-- [ ] How to build a budget from last year's numbers in an hour
+- [x] How to build a budget from last year's numbers in an hour (2026-11-18, https://heytilo.ai/guides/2027-budget-from-2026-numbers.html)
 - [ ] Budget vs actual: how to read it and what to do about misses
 - [ ] Financial ratios every owner should know, in plain English
 
