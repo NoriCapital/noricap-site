@@ -17,7 +17,7 @@ page for. If a state or city has too little to fill a real guide, tick it "skipp
 - [x] Where to get funding for a small business: every option compared (banks, SBA, CDFIs, credit unions, online lenders, factoring, equipment finance, grants) (2026-11-16, https://heytilo.ai/guides/small-business-funding-options.html)
 - [x] SBA loan programs explained: 7(a), 7(a) small loans, Express, 504, Microloan and CAPLines (2026-11-17, https://heytilo.ai/guides/sba-loan-programs.html)
 - [x] State small business loan programs (SSBCI): what states offer and how to find yours (2026-11-18, https://heytilo.ai/guides/state-small-business-loan-programs-ssbci.html)
-- [ ] Local small business loans: city and county loan funds, economic development groups and how to find them
+- [x] Local small business loans: city and county loan funds, economic development groups and how to find them (2026-11-19, https://heytilo.ai/guides/local-small-business-loans.html)
 
 ### Federal
 - [ ] SBA Express loans: limits, speed and who should use them
