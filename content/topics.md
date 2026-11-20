@@ -20,7 +20,7 @@ page for. If a state or city has too little to fill a real guide, tick it "skipp
 - [x] Local small business loans: city and county loan funds, economic development groups and how to find them (2026-11-19, https://heytilo.ai/guides/local-small-business-loans.html)
 
 ### Federal
-- [ ] SBA Express loans: limits, speed and who should use them
+- [x] SBA Express loans: limits, speed and who should use them (2026-11-20, https://heytilo.ai/guides/sba-express-loans.html)
 - [ ] SBA Microloans: who offers them and how to apply
 - [ ] SBA CAPLines: working capital lines for contractors and seasonal businesses
 - [ ] How to find an SBA lender (Lender Match and preferred lenders)
