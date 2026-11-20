@@ -43,3 +43,4 @@ Business decisions that change what customers see or pay: pricing, plans, brand,
 - Which industry to focus marketing on first. Current lean: HVAC, plumbing and electrical, with automotive and transport as a second test (listings data, 2026-11-10). Not decided.
 - Whether to roll up small bookkeeping and tax firms. Not decided.
 - Bookkeeping "from $499" includes the Tilo app, which costs $799 on its own; wording or pricing to be settled by Philip and Pratibha.
+| 2026-11-20 | Philip | Newsletter and X focus on free money for businesses: grants, tax credits, rebates and refunds owners can claim, each with the dollar amount, who qualifies and the deadline. Site newsletter boxes updated to match. (Briefly considered buying and selling businesses the same morning; not used.) |
