@@ -17,6 +17,9 @@ http://www.noricap.com/*     https://heytilo.ai/:splat    301!
 /what-nori-does    /what-tilo-does.html    301
 /what-nori-does.html    /what-tilo-does.html    301
 /nori-13-week-cash-forecast.xlsx    /tilo-13-week-cash-forecast.xlsx    301
+/free-money    /free-money.html    301
+/checklist    /free-money.html    301
+/free-money-checklist    /free-money-checklist.html    301
 /pricing    /pricing.html    301
 /services    /pricing.html    301
 /services.html    /pricing.html    301
