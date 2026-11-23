@@ -21,7 +21,7 @@ page for. If a state or city has too little to fill a real guide, tick it "skipp
 
 ### Federal
 - [x] SBA Express loans: limits, speed and who should use them (2026-11-20, https://heytilo.ai/guides/sba-express-loans.html)
-- [ ] SBA Microloans: who offers them and how to apply
+- [x] SBA Microloans: who offers them and how to apply (2026-11-23, https://heytilo.ai/guides/sba-microloans.html)
 - [ ] SBA CAPLines: working capital lines for contractors and seasonal businesses
 - [ ] How to find an SBA lender (Lender Match and preferred lenders)
 - [ ] SBA loans to buy a business: the 1.25x coverage rule from October 2026
