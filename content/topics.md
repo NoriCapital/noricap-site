@@ -24,7 +24,7 @@ page for. If a state or city has too little to fill a real guide, tick it "skipp
 - [x] SBA Microloans: who offers them and how to apply (2026-11-23, https://heytilo.ai/guides/sba-microloans.html)
 - [x] SBA CAPLines: working capital lines for contractors and seasonal businesses (2026-11-24, https://heytilo.ai/guides/sba-caplines.html)
 - [x] How to find an SBA lender (Lender Match and preferred lenders) (2026-11-26, https://heytilo.ai/guides/find-sba-lender.html)
-- [ ] SBA loans to buy a business: the 1.25x coverage rule from October 2026
+- [x] SBA loans to buy a business: the 1.25x coverage rule from October 2026 (2026-11-27, https://heytilo.ai/guides/sba-loan-buy-business.html)
 - [ ] CDFI loans: what they are and how to find one near you
 - [ ] USDA Business & Industry loans for rural businesses
 - [ ] Export financing: SBA export loans and EXIM working capital
